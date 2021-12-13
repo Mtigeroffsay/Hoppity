@@ -1,0 +1,1 @@
+python ./gtrans/training/main_gtrans_transfer.py -data_root ./gtrans/BigVul_processed -data_name cwe_full -save_dir ./BigVul_save2 -gnn_type "s2v_multi" -max_lv 4 -resampling True -comp_method "mlp" -batch_size 3

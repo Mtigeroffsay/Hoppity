@@ -1,0 +1,155 @@
+[
+    {
+        "edit": "del_node!#@$134"
+    },
+    {
+        "edit": "del_node!#@$133"
+    },
+    {
+        "edit": "del_node!#@$69"
+    },
+    {
+        "edit": "del_node!#@$68"
+    },
+    {
+        "edit": "del_node!#@$67"
+    },
+    {
+        "edit": "replace_type!#@$66!#@$ExpressionStatement"
+    },
+    {
+        "edit": "add_node!#@$66!#@$0!#@$Expression!#@$CallExpression!#@$None"
+    },
+    {
+        "edit": "add_node!#@$212!#@$0!#@$LeftOpenParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$212!#@$1!#@$Callee!#@$Callee!#@$None"
+    },
+    {
+        "edit": "add_node!#@$214!#@$0!#@$Expression!#@$Identifier!#@$None"
+    },
+    {
+        "edit": "add_node!#@$215!#@$0!#@$IdentifierTokens!#@$SyntaxToken!#@$fwrite"
+    },
+    {
+        "edit": "add_node!#@$212!#@$2!#@$LeftCloseParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$212!#@$3!#@$RightOpenParenthesisToken!#@$SyntaxToken!#@$("
+    },
+    {
+        "edit": "add_node!#@$212!#@$4!#@$ArgumentList!#@$ArgumentList!#@$None"
+    },
+    {
+        "edit": "add_node!#@$219!#@$0!#@$Arguments!#@$None"
+    },
+    {
+        "edit": "add_node!#@$220!#@$0!#@$Argument!#@$None"
+    },
+    {
+        "edit": "add_node!#@$221!#@$0!#@$Expression!#@$CastExpression!#@$None"
+    },
+    {
+        "edit": "add_node!#@$222!#@$0!#@$LeftOpenParenthesisToken!#@$SyntaxToken!#@$("
+    },
+    {
+        "edit": "add_node!#@$222!#@$1!#@$CastTarget!#@$CastTarget!#@$None"
+    },
+    {
+        "edit": "add_node!#@$224!#@$0!#@$CastTargetTokens!#@$SyntaxToken!#@$char *"
+    },
+    {
+        "edit": "add_node!#@$222!#@$2!#@$LeftCloseParenthesisToken!#@$SyntaxToken!#@$)"
+    },
+    {
+        "edit": "add_node!#@$222!#@$3!#@$RightOpenParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$222!#@$4!#@$Expression!#@$PrimaryExpression!#@$None"
+    },
+    {
+        "edit": "add_node!#@$228!#@$0!#@$PrimaryToken!#@$SyntaxToken!#@$\"string\""
+    },
+    {
+        "edit": "add_node!#@$222!#@$5!#@$RightCloseParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$220!#@$1!#@$Argument!#@$None"
+    },
+    {
+        "edit": "add_node!#@$231!#@$0!#@$Expression!#@$SizeofExpr!#@$None"
+    },
+    {
+        "edit": "add_node!#@$232!#@$0!#@$SizeofToken!#@$SyntaxToken!#@$sizeof"
+    },
+    {
+        "edit": "add_node!#@$232!#@$1!#@$OpenParenthesisToken!#@$SyntaxToken!#@$("
+    },
+    {
+        "edit": "add_node!#@$232!#@$2!#@$SizeofOperand!#@$SizeofOperand!#@$None"
+    },
+    {
+        "edit": "add_node!#@$235!#@$0!#@$SizeofOperandToken!#@$SyntaxToken!#@$char"
+    },
+    {
+        "edit": "add_node!#@$232!#@$3!#@$CloseParenthesisToken!#@$SyntaxToken!#@$)"
+    },
+    {
+        "edit": "add_node!#@$220!#@$2!#@$Argument!#@$None"
+    },
+    {
+        "edit": "add_node!#@$238!#@$0!#@$Expression!#@$CallExpression!#@$None"
+    },
+    {
+        "edit": "add_node!#@$239!#@$0!#@$LeftOpenParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$239!#@$1!#@$Callee!#@$Callee!#@$None"
+    },
+    {
+        "edit": "add_node!#@$241!#@$0!#@$Expression!#@$Identifier!#@$None"
+    },
+    {
+        "edit": "add_node!#@$242!#@$0!#@$IdentifierTokens!#@$SyntaxToken!#@$strlen"
+    },
+    {
+        "edit": "add_node!#@$239!#@$2!#@$LeftCloseParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$239!#@$3!#@$RightOpenParenthesisToken!#@$SyntaxToken!#@$("
+    },
+    {
+        "edit": "add_node!#@$239!#@$4!#@$ArgumentList!#@$ArgumentList!#@$None"
+    },
+    {
+        "edit": "add_node!#@$246!#@$0!#@$Arguments!#@$None"
+    },
+    {
+        "edit": "add_node!#@$247!#@$0!#@$Argument!#@$None"
+    },
+    {
+        "edit": "add_node!#@$248!#@$0!#@$Expression!#@$PrimaryExpression!#@$None"
+    },
+    {
+        "edit": "add_node!#@$249!#@$0!#@$PrimaryToken!#@$SyntaxToken!#@$\"string\""
+    },
+    {
+        "edit": "add_node!#@$239!#@$5!#@$RightCloseParenthesisToken!#@$SyntaxToken!#@$)"
+    },
+    {
+        "edit": "add_node!#@$220!#@$3!#@$Argument!#@$None"
+    },
+    {
+        "edit": "add_node!#@$252!#@$0!#@$Expression!#@$Identifier!#@$None"
+    },
+    {
+        "edit": "add_node!#@$253!#@$0!#@$IdentifierTokens!#@$SyntaxToken!#@$stdout"
+    },
+    {
+        "edit": "add_node!#@$212!#@$5!#@$RightCloseParenthesisToken!#@$SyntaxToken!#@$)"
+    },
+    {
+        "edit": "add_node!#@$66!#@$1!#@$SemicolonToken!#@$SyntaxToken!#@$;"
+    }
+]

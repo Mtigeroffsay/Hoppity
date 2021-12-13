@@ -1,0 +1,143 @@
+[
+    {
+        "edit": "replace_val!#@$206!#@$name_1"
+    },
+    {
+        "edit": "del_node!#@$139"
+    },
+    {
+        "edit": "del_node!#@$97"
+    },
+    {
+        "edit": "del_node!#@$96"
+    },
+    {
+        "edit": "del_node!#@$77"
+    },
+    {
+        "edit": "del_node!#@$76"
+    },
+    {
+        "edit": "del_node!#@$75"
+    },
+    {
+        "edit": "replace_type!#@$74!#@$IdentifierDeclStatement"
+    },
+    {
+        "edit": "add_node!#@$74!#@$0!#@$IdentifierDecl!#@$IdentifierDecl!#@$None"
+    },
+    {
+        "edit": "add_node!#@$219!#@$0!#@$IdentifierDeclType!#@$IdentifierDeclType!#@$None"
+    },
+    {
+        "edit": "add_node!#@$220!#@$0!#@$Decl_Type!#@$SyntaxToken!#@$unsigned"
+    },
+    {
+        "edit": "add_node!#@$219!#@$1!#@$Expression!#@$AssignmentExpr!#@$None"
+    },
+    {
+        "edit": "add_node!#@$222!#@$0!#@$LeftOpenParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$222!#@$1!#@$LeftExpression!#@$Identifier!#@$None"
+    },
+    {
+        "edit": "add_node!#@$224!#@$0!#@$IdentifierTokens!#@$SyntaxToken!#@$data * 2"
+    },
+    {
+        "edit": "add_node!#@$222!#@$2!#@$LeftCloseParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$222!#@$3!#@$AssignmentToken!#@$SyntaxToken!#@$="
+    },
+    {
+        "edit": "add_node!#@$222!#@$4!#@$RightOpenParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$222!#@$5!#@$RightExpression!#@$MultiplicativeExpression!#@$None"
+    },
+    {
+        "edit": "add_node!#@$229!#@$0!#@$LeftOpenParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$229!#@$1!#@$LeftExpression!#@$Identifier!#@$None"
+    },
+    {
+        "edit": "add_node!#@$231!#@$0!#@$IdentifierTokens!#@$SyntaxToken!#@$data"
+    },
+    {
+        "edit": "add_node!#@$229!#@$2!#@$LeftCloseParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$229!#@$3!#@$MultipleToken!#@$SyntaxToken!#@$*"
+    },
+    {
+        "edit": "add_node!#@$229!#@$4!#@$RightOpenParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$229!#@$5!#@$RightExpression!#@$PrimaryExpression!#@$None"
+    },
+    {
+        "edit": "add_node!#@$236!#@$0!#@$PrimaryToken!#@$SyntaxToken!#@$2"
+    },
+    {
+        "edit": "add_node!#@$229!#@$6!#@$RightCloseParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$222!#@$6!#@$RightCloseParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$74!#@$1!#@$SemicolonToken!#@$SyntaxToken!#@$;"
+    },
+    {
+        "edit": "add_node!#@$73!#@$1!#@$ExpressionStatement!#@$None"
+    },
+    {
+        "edit": "add_node!#@$241!#@$0!#@$Expression!#@$CallExpression!#@$None"
+    },
+    {
+        "edit": "add_node!#@$242!#@$0!#@$LeftOpenParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$242!#@$1!#@$Callee!#@$Callee!#@$None"
+    },
+    {
+        "edit": "add_node!#@$244!#@$0!#@$Expression!#@$Identifier!#@$None"
+    },
+    {
+        "edit": "add_node!#@$245!#@$0!#@$IdentifierTokens!#@$SyntaxToken!#@$printUnsignedLine"
+    },
+    {
+        "edit": "add_node!#@$242!#@$2!#@$LeftCloseParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$242!#@$3!#@$RightOpenParenthesisToken!#@$SyntaxToken!#@$("
+    },
+    {
+        "edit": "add_node!#@$242!#@$4!#@$ArgumentList!#@$ArgumentList!#@$None"
+    },
+    {
+        "edit": "add_node!#@$249!#@$0!#@$Arguments!#@$None"
+    },
+    {
+        "edit": "add_node!#@$250!#@$0!#@$Argument!#@$None"
+    },
+    {
+        "edit": "add_node!#@$251!#@$0!#@$Expression!#@$Identifier!#@$None"
+    },
+    {
+        "edit": "add_node!#@$252!#@$0!#@$IdentifierTokens!#@$SyntaxToken!#@$result"
+    },
+    {
+        "edit": "add_node!#@$242!#@$5!#@$RightCloseParenthesisToken!#@$SyntaxToken!#@$)"
+    },
+    {
+        "edit": "add_node!#@$241!#@$1!#@$SemicolonToken!#@$SyntaxToken!#@$;"
+    },
+    {
+        "edit": "replace_val!#@$45!#@$name_0"
+    },
+    {
+        "edit": "replace_val!#@$6!#@$name_1"
+    }
+]

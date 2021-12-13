@@ -1,0 +1,101 @@
+[
+    {
+        "edit": "replace_val!#@$888!#@$MD2_SUM_SIZE"
+    },
+    {
+        "edit": "replace_val!#@$761!#@$MD2_SUM_SIZE"
+    },
+    {
+        "edit": "replace_val!#@$595!#@$CALG_MD2"
+    },
+    {
+        "edit": "del_node!#@$354"
+    },
+    {
+        "edit": "del_node!#@$341"
+    },
+    {
+        "edit": "replace_type!#@$340!#@$IfStatement"
+    },
+    {
+        "edit": "add_node!#@$340!#@$0!#@$IfToken!#@$SyntaxToken!#@$if"
+    },
+    {
+        "edit": "add_node!#@$340!#@$1!#@$OpenParenthesisToken!#@$SyntaxToken!#@$("
+    },
+    {
+        "edit": "add_node!#@$340!#@$2!#@$Condition!#@$Condition!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1052!#@$0!#@$Expression!#@$Identifier!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1053!#@$0!#@$IdentifierTokens!#@$SyntaxToken!#@$pFile"
+    },
+    {
+        "edit": "add_node!#@$340!#@$3!#@$CloseParenthesisToken!#@$SyntaxToken!#@$)"
+    },
+    {
+        "edit": "add_node!#@$340!#@$4!#@$Statement!#@$CompoundStatement!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1056!#@$0!#@$OpenBraceToken!#@$SyntaxToken!#@${"
+    },
+    {
+        "edit": "add_node!#@$1056!#@$1!#@$Statements!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1058!#@$0!#@$ExpressionStatement!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1059!#@$0!#@$Expression!#@$CallExpression!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1060!#@$0!#@$LeftOpenParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$1060!#@$1!#@$Callee!#@$Callee!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1062!#@$0!#@$Expression!#@$Identifier!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1063!#@$0!#@$IdentifierTokens!#@$SyntaxToken!#@$fclose"
+    },
+    {
+        "edit": "add_node!#@$1060!#@$2!#@$LeftCloseParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$1060!#@$3!#@$RightOpenParenthesisToken!#@$SyntaxToken!#@$("
+    },
+    {
+        "edit": "add_node!#@$1060!#@$4!#@$ArgumentList!#@$ArgumentList!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1067!#@$0!#@$Arguments!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1068!#@$0!#@$Argument!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1069!#@$0!#@$Expression!#@$Identifier!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1070!#@$0!#@$IdentifierTokens!#@$SyntaxToken!#@$pFile"
+    },
+    {
+        "edit": "add_node!#@$1060!#@$5!#@$RightCloseParenthesisToken!#@$SyntaxToken!#@$)"
+    },
+    {
+        "edit": "add_node!#@$1059!#@$1!#@$SemicolonToken!#@$SyntaxToken!#@$;"
+    },
+    {
+        "edit": "add_node!#@$1056!#@$2!#@$CloseBraceToken!#@$SyntaxToken!#@$}"
+    },
+    {
+        "edit": "replace_val!#@$175!#@$MD2_SUM_SIZE"
+    },
+    {
+        "edit": "replace_val!#@$68!#@$savedHash [ MD2_SUM_SIZE ] , calcHash [ MD2_SUM_SIZE ]"
+    }
+]

@@ -1,0 +1,308 @@
+[
+    {
+        "edit": "replace_val!#@$1513!#@$name_2"
+    },
+    {
+        "edit": "replace_val!#@$1443!#@$name_1"
+    },
+    {
+        "edit": "replace_val!#@$1430!#@$name_0"
+    },
+    {
+        "edit": "replace_val!#@$675!#@$name_2"
+    },
+    {
+        "edit": "del_node!#@$598"
+    },
+    {
+        "edit": "del_node!#@$569"
+    },
+    {
+        "edit": "del_node!#@$543"
+    },
+    {
+        "edit": "del_node!#@$517"
+    },
+    {
+        "edit": "del_node!#@$129"
+    },
+    {
+        "edit": "del_node!#@$114"
+    },
+    {
+        "edit": "del_node!#@$99"
+    },
+    {
+        "edit": "del_node!#@$92"
+    },
+    {
+        "edit": "del_node!#@$91"
+    },
+    {
+        "edit": "del_node!#@$78"
+    },
+    {
+        "edit": "replace_type!#@$77!#@$IfStatement"
+    },
+    {
+        "edit": "add_node!#@$77!#@$0!#@$IfToken!#@$SyntaxToken!#@$if"
+    },
+    {
+        "edit": "add_node!#@$77!#@$1!#@$OpenParenthesisToken!#@$SyntaxToken!#@$("
+    },
+    {
+        "edit": "add_node!#@$77!#@$2!#@$Condition!#@$Condition!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1528!#@$0!#@$Expression!#@$EqualityExpression!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1529!#@$0!#@$LeftOpenParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$1529!#@$1!#@$LeftExpression!#@$CallExpression!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1531!#@$0!#@$LeftOpenParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$1531!#@$1!#@$Callee!#@$Callee!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1533!#@$0!#@$Expression!#@$Identifier!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1534!#@$0!#@$IdentifierTokens!#@$SyntaxToken!#@$LogonUserA"
+    },
+    {
+        "edit": "add_node!#@$1531!#@$2!#@$LeftCloseParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$1531!#@$3!#@$RightOpenParenthesisToken!#@$SyntaxToken!#@$("
+    },
+    {
+        "edit": "add_node!#@$1531!#@$4!#@$ArgumentList!#@$ArgumentList!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1538!#@$0!#@$Arguments!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1539!#@$0!#@$Argument!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1540!#@$0!#@$Expression!#@$Identifier!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1541!#@$0!#@$IdentifierTokens!#@$SyntaxToken!#@$username"
+    },
+    {
+        "edit": "add_node!#@$1539!#@$1!#@$Argument!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1543!#@$0!#@$Expression!#@$Identifier!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1544!#@$0!#@$IdentifierTokens!#@$SyntaxToken!#@$domain"
+    },
+    {
+        "edit": "add_node!#@$1539!#@$2!#@$Argument!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1546!#@$0!#@$Expression!#@$Identifier!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1547!#@$0!#@$IdentifierTokens!#@$SyntaxToken!#@$password"
+    },
+    {
+        "edit": "add_node!#@$1539!#@$3!#@$Argument!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1549!#@$0!#@$Expression!#@$Identifier!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1550!#@$0!#@$IdentifierTokens!#@$SyntaxToken!#@$LOGON32_LOGON_NETWORK"
+    },
+    {
+        "edit": "add_node!#@$1539!#@$4!#@$Argument!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1552!#@$0!#@$Expression!#@$Identifier!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1553!#@$0!#@$IdentifierTokens!#@$SyntaxToken!#@$LOGON32_PROVIDER_DEFAULT"
+    },
+    {
+        "edit": "add_node!#@$1539!#@$5!#@$Argument!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1555!#@$0!#@$Expression!#@$UnaryOp!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1556!#@$0!#@$UnaryOperator!#@$UnaryOperator!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1557!#@$0!#@$UnaryOperatorToken!#@$SyntaxToken!#@$&"
+    },
+    {
+        "edit": "add_node!#@$1556!#@$1!#@$OpenParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$1556!#@$2!#@$Expression!#@$Identifier!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1560!#@$0!#@$IdentifierTokens!#@$SyntaxToken!#@$pHandle"
+    },
+    {
+        "edit": "add_node!#@$1556!#@$3!#@$CloseParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$1531!#@$5!#@$RightCloseParenthesisToken!#@$SyntaxToken!#@$)"
+    },
+    {
+        "edit": "add_node!#@$1529!#@$2!#@$LeftCloseParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$1529!#@$3!#@$EqualityToken!#@$SyntaxToken!#@$!="
+    },
+    {
+        "edit": "add_node!#@$1529!#@$4!#@$RightOpenParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$1529!#@$5!#@$RightExpression!#@$PrimaryExpression!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1567!#@$0!#@$PrimaryToken!#@$SyntaxToken!#@$0"
+    },
+    {
+        "edit": "add_node!#@$1529!#@$6!#@$RightCloseParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$77!#@$3!#@$CloseParenthesisToken!#@$SyntaxToken!#@$)"
+    },
+    {
+        "edit": "add_node!#@$77!#@$4!#@$Statement!#@$CompoundStatement!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1571!#@$0!#@$OpenBraceToken!#@$SyntaxToken!#@${"
+    },
+    {
+        "edit": "add_node!#@$1571!#@$1!#@$Statements!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1573!#@$0!#@$ExpressionStatement!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1574!#@$0!#@$Expression!#@$CallExpression!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1575!#@$0!#@$LeftOpenParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$1575!#@$1!#@$Callee!#@$Callee!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1577!#@$0!#@$Expression!#@$Identifier!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1578!#@$0!#@$IdentifierTokens!#@$SyntaxToken!#@$CloseHandle"
+    },
+    {
+        "edit": "add_node!#@$1575!#@$2!#@$LeftCloseParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$1575!#@$3!#@$RightOpenParenthesisToken!#@$SyntaxToken!#@$("
+    },
+    {
+        "edit": "add_node!#@$1575!#@$4!#@$ArgumentList!#@$ArgumentList!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1582!#@$0!#@$Arguments!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1583!#@$0!#@$Argument!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1584!#@$0!#@$Expression!#@$Identifier!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1585!#@$0!#@$IdentifierTokens!#@$SyntaxToken!#@$pHandle"
+    },
+    {
+        "edit": "add_node!#@$1575!#@$5!#@$RightCloseParenthesisToken!#@$SyntaxToken!#@$)"
+    },
+    {
+        "edit": "add_node!#@$1574!#@$1!#@$SemicolonToken!#@$SyntaxToken!#@$;"
+    },
+    {
+        "edit": "add_node!#@$1571!#@$2!#@$CloseBraceToken!#@$SyntaxToken!#@$}"
+    },
+    {
+        "edit": "add_node!#@$77!#@$5!#@$ElseStatement!#@$ElseStatement!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1590!#@$0!#@$ElseToken!#@$SyntaxToken!#@$else"
+    },
+    {
+        "edit": "add_node!#@$1590!#@$1!#@$Statement!#@$CompoundStatement!#@$None"
+    },
+    {
+        "edit": "add_node!#@$1592!#@$0!#@$OpenBraceToken!#@$SyntaxToken!#@${"
+    },
+    {
+        "edit": "add_node!#@$1592!#@$2!#@$CloseBraceToken!#@$SyntaxToken!#@$}"
+    },
+    {
+        "edit": "replace_val!#@$74!#@$\"Domain\""
+    },
+    {
+        "edit": "replace_val!#@$69!#@$* domain"
+    },
+    {
+        "edit": "replace_val!#@$65!#@$char"
+    },
+    {
+        "edit": "replace_val!#@$59!#@$\"User\""
+    },
+    {
+        "edit": "replace_val!#@$54!#@$* username"
+    },
+    {
+        "edit": "replace_val!#@$50!#@$char"
+    },
+    {
+        "edit": "del_node!#@$45"
+    },
+    {
+        "edit": "del_node!#@$43"
+    },
+    {
+        "edit": "del_node!#@$42"
+    },
+    {
+        "edit": "del_node!#@$41"
+    },
+    {
+        "edit": "del_node!#@$40"
+    },
+    {
+        "edit": "del_node!#@$38"
+    },
+    {
+        "edit": "del_node!#@$37"
+    },
+    {
+        "edit": "replace_type!#@$36!#@$Identifier"
+    },
+    {
+        "edit": "add_node!#@$36!#@$0!#@$IdentifierTokens!#@$SyntaxToken!#@$pHandle"
+    },
+    {
+        "edit": "replace_val!#@$35!#@$HANDLE"
+    },
+    {
+        "edit": "replace_val!#@$24!#@$name_0"
+    },
+    {
+        "edit": "replace_val!#@$6!#@$name_1"
+    }
+]

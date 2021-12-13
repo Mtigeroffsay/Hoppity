@@ -1,0 +1,80 @@
+[
+    {
+        "edit": "replace_val!#@$413!#@$dest [ 100 ]"
+    },
+    {
+        "edit": "del_node!#@$376"
+    },
+    {
+        "edit": "del_node!#@$375"
+    },
+    {
+        "edit": "replace_type!#@$374!#@$Identifier"
+    },
+    {
+        "edit": "add_node!#@$374!#@$0!#@$IdentifierTokens!#@$SyntaxToken!#@$data"
+    },
+    {
+        "edit": "del_node!#@$311"
+    },
+    {
+        "edit": "del_node!#@$194"
+    },
+    {
+        "edit": "del_node!#@$193"
+    },
+    {
+        "edit": "replace_type!#@$192!#@$ExpressionStatement"
+    },
+    {
+        "edit": "add_node!#@$192!#@$0!#@$Expression!#@$CallExpression!#@$None"
+    },
+    {
+        "edit": "add_node!#@$544!#@$0!#@$LeftOpenParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$544!#@$1!#@$Callee!#@$Callee!#@$None"
+    },
+    {
+        "edit": "add_node!#@$546!#@$0!#@$Expression!#@$Identifier!#@$None"
+    },
+    {
+        "edit": "add_node!#@$547!#@$0!#@$IdentifierTokens!#@$SyntaxToken!#@$strcpy"
+    },
+    {
+        "edit": "add_node!#@$544!#@$2!#@$LeftCloseParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$544!#@$3!#@$RightOpenParenthesisToken!#@$SyntaxToken!#@$("
+    },
+    {
+        "edit": "add_node!#@$544!#@$4!#@$ArgumentList!#@$ArgumentList!#@$None"
+    },
+    {
+        "edit": "add_node!#@$551!#@$0!#@$Arguments!#@$None"
+    },
+    {
+        "edit": "add_node!#@$552!#@$0!#@$Argument!#@$None"
+    },
+    {
+        "edit": "add_node!#@$553!#@$0!#@$Expression!#@$Identifier!#@$None"
+    },
+    {
+        "edit": "add_node!#@$554!#@$0!#@$IdentifierTokens!#@$SyntaxToken!#@$data"
+    },
+    {
+        "edit": "add_node!#@$552!#@$1!#@$Argument!#@$None"
+    },
+    {
+        "edit": "add_node!#@$556!#@$0!#@$Expression!#@$PrimaryExpression!#@$None"
+    },
+    {
+        "edit": "add_node!#@$557!#@$0!#@$PrimaryToken!#@$SyntaxToken!#@$\"fixedstringtest\""
+    },
+    {
+        "edit": "add_node!#@$544!#@$5!#@$RightCloseParenthesisToken!#@$SyntaxToken!#@$)"
+    },
+    {
+        "edit": "add_node!#@$192!#@$1!#@$SemicolonToken!#@$SyntaxToken!#@$;"
+    }
+]
