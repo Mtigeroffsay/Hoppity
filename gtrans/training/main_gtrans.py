@@ -38,8 +38,6 @@ if __name__ == '__main__':
     torch.manual_seed(cmd_args.seed)
     torch.autograd.set_detect_anomaly(True)
     
-    print(cmd_args.use_colab)
-    
     vocab_name = 'vocab_%s.npy' % cmd_args.vocab_type
     print('loading value vocab from', vocab_name)
     const_val_vocab = np.load(os.path.join(cmd_args.data_root, vocab_name), allow_pickle=True).item()

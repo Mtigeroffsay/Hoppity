@@ -17,5 +17,4 @@ python ./gtrans/training/main_gtrans.py \
   -max_ast_nodes 3000\
   -num_epochs 100\
   -output_all True \
-  -use_colab True \
   $@
