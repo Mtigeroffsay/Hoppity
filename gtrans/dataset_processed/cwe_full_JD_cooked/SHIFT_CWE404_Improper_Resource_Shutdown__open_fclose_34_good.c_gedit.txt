@@ -1,0 +1,35 @@
+[
+    {
+        "edit": "del_node!#@$171"
+    },
+    {
+        "edit": "replace_type!#@$170!#@$CastExpression"
+    },
+    {
+        "edit": "add_node!#@$170!#@$0!#@$LeftOpenParenthesisToken!#@$SyntaxToken!#@$("
+    },
+    {
+        "edit": "add_node!#@$170!#@$1!#@$CastTarget!#@$CastTarget!#@$None"
+    },
+    {
+        "edit": "add_node!#@$250!#@$0!#@$CastTargetTokens!#@$SyntaxToken!#@$FILE *"
+    },
+    {
+        "edit": "add_node!#@$170!#@$2!#@$LeftCloseParenthesisToken!#@$SyntaxToken!#@$)"
+    },
+    {
+        "edit": "add_node!#@$170!#@$3!#@$RightOpenParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "add_node!#@$170!#@$4!#@$Expression!#@$Identifier!#@$None"
+    },
+    {
+        "edit": "add_node!#@$254!#@$0!#@$IdentifierTokens!#@$SyntaxToken!#@$data"
+    },
+    {
+        "edit": "add_node!#@$170!#@$5!#@$RightCloseParenthesisToken!#@$SyntaxToken!#@$"
+    },
+    {
+        "edit": "replace_val!#@$164!#@$fclose"
+    }
+]
