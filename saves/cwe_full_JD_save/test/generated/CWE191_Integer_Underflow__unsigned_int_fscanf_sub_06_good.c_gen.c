@@ -1,0 +1,1 @@
+void name_0 ( ) { unsigned int data ;  data  =  0  ; if (  STATIC_CONST_FIVE  ==  5  ) {  fscanf  ( stdin "%u" &  data  ) ; } if (  STATIC_CONST_FIVE  ==  5  ) { {  data  else ; unsigned  data - 1  =  data  ;  printUnsignedLine  ( result ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

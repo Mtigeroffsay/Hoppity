@@ -1,0 +1,1 @@
+void name_0 ( ) { short data ;  data  =  0  ; if (  globalReturnsTrue  ( ) ) {  data  =  SHRT_MAX  ; } if (  globalReturnsTrue  ( ) ) { { short  result  =   data  *  data   ;  printIntLine  ( result ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { char * data ; char  data_buf [ 100 ]  =  FULL_COMMAND  ;  data  =  data_buf  ; if (  STATIC_CONST_FIVE  ==  5  ) {  strcat  ( data "*.*" ) ; } { FILE * pipe ;  pipe  =   POPEN  ( data "w" )  ; if (  pipe  !=  NULL  ) {  PCLOSE  ( pipe ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

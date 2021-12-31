@@ -1,0 +1,1 @@
+void name_0 ( ) { if (   globalReturnsTrueOrFalse  ( )  ==  STATIC_CONST_TRUE  ) {  printLine  (  getenv  ( "PATH" ) ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { wchar_t * data ; wchar_t dataBuffer [ 100 ] = L "" ;  data  =  dataBuffer  ; if ( staticTrue ) {  wcscpy  ( data GOOD_OS_COMMAND ) ; } { FILE * pipe ; pipe = POPEN ( data , L "wb" ) ; if (  pipe  !=  NULL  ) {  PCLOSE  ( pipe ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

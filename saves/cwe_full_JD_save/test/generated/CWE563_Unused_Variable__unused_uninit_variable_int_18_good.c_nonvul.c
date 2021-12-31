@@ -1,0 +1,1 @@
+void name_0 ( ) { int data ; ; goto sink ; sink :  data  =  5  ;  printIntLine  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

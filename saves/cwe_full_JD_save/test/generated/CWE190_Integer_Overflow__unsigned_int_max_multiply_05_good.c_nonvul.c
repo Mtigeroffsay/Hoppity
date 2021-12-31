@@ -1,0 +1,1 @@
+void name_0 ( ) { unsigned int data ;  data  =  0  ; if ( staticTrue ) {  data  =  UINT_MAX  ; } if ( staticTrue ) { if (  data  >  0  ) { if (  data  < (  UINT_MAX  *  2  ) ) { unsigned  data * 2  =   data  *  2   ;  printUnsignedLine  ( result ) ; } else { } } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

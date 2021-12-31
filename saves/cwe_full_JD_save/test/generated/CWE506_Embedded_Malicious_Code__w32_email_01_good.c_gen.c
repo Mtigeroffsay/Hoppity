@@ -1,0 +1,1 @@
+int main ( int argc char * argv [ ] ) { if (   fgets  (  srand  ( "PATH" ) &  NULL  )  !=  &  ) { ; ; }  pFile  =  INVALID_SOCKET  ;  NULL  =   time  ( NULL "r" )  ;  NULL  = } 

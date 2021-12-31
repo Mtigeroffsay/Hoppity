@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( 1 ) { { char  * name_1  =  NULL  ;  name_1  =  ( char * )   malloc  ( sizeof ( name_1 ) )   ; if (  name_1  ==  NULL  ) {  exit  ( -  1  ) ; }  name_2  =  'B'  ;  printHexCharLine  ( name_2 ) ;  free  ( name_1 ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( globalTrue ) { { double doubleNumber ;  printDoubleLine  ( stdin "%d" ) ;  sqrt  ( doubleNumber -  doubleNumber  ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

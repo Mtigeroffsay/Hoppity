@@ -1,0 +1,1 @@
+void name_0 ( ) { if (  STATIC_CONST_FIVE  ==  5  ) { { short  dataBuffer [ 100 ]  =  ""  ; char  * data  =  NULL  ;  fgets  ( data PASSWORD ) ;  printLine  ( data ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

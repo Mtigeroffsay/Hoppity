@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( STATIC_CONST_TRUE ) { if (   fwrite  ( ( char * )  "string"  sizeof ( char )  strlen  ( "string" ) stdout )  !=   strlen  ( "string" )  ) { } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( wchar_t * data ) { { va_list args ;  va_start  ( args data ) ;  vfwprintf  ( stdout data args ) ;  wcslen  ( args ) ; } } void name_2 ( ) { wchar_t * data ; data = 1 - = ] [ L && == ) ;  name_0  ( UNKNOWN } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

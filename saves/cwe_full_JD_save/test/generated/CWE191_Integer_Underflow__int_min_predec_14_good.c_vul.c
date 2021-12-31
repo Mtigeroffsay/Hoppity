@@ -1,0 +1,1 @@
+void name_0 ( ) { int data ;  data  =  0  ; if (  globalFive  ==  5  ) {  data  =  INT_MIN  ; } if (  globalFive  ==  5  ) { { --  data  ; int  result  =  data  ;  printIntLine  ( result ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

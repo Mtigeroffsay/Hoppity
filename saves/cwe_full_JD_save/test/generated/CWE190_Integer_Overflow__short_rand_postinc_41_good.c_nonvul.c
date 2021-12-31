@@ -1,0 +1,1 @@
+void name_0 ( short data ) { if (  data  <  SHRT_MAX  ) {  data  ++ ; short  result  =  data  ;  printIntLine  ( result ) ; } else { } } void name_1 ( ) { short data ;  data  =  0  ;  data  =  ( short )   RAND32  ( )   ;  name_0  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_2 ( ) { int64_t data ; CWE191_Integer_Underflow__int64_t_min_predec_67_structType myStruct ; data = 0L L ;  data  =  LLONG_MIN  ;   myStruct  .  structFirst   =  data  ;  name_1  ( myStruct ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

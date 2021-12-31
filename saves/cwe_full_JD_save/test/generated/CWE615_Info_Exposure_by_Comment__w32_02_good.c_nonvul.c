@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( 1 ) { { size_t  passwordLen  =  0  ; HANDLE hUser ; char  * domain  =  "Domain"  ; if (   LogonUserA  ( USERNAME domain PASSWORD LOGON32_LOGON_NETWORK LOGON32_PROVIDER_DEFAULT &  hUser  )  !=  0  ) {  CloseHandle  ( hUser ) ; } else { } } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

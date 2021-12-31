@@ -1,0 +1,1 @@
+void name_0 ( ) { while ( 1 ) { { double doubleNumber ;  printDoubleLine  ( stdin "%d" ) ;  sqrt  ( doubleNumber -  doubleNumber  ) ; } break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

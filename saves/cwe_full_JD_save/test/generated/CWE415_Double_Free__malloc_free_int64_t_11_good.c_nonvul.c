@@ -1,0 +1,1 @@
+void name_0 ( ) { int64_t * data ;  data  =  NULL  ; if (  globalReturnsTrue  ( ) ) {  data  =  ( int64_t * )   malloc  (  100  *  sizeof ( int64_t )  )   ; if (  data  ==  NULL  ) {  exit  ( -  1  ) ; }  free  ( data ) ; } if (  globalReturnsTrue  ( ) ) { ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

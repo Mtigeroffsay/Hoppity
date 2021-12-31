@@ -1,0 +1,1 @@
+void name_0 ( ) { if (  staticFive  ==  5  ) { { char  UNKNOWN  =  ( char * * )   malloc  ( sizeof ( char * ) )   ; char  * pointer  =  *  pointer   ;  free  ( pointer ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

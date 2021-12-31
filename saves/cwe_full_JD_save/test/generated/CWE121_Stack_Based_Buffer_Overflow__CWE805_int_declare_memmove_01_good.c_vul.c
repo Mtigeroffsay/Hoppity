@@ -1,0 +1,1 @@
+void name_0 ( ) { int * data ; int dataBadBuffer [ 50 ] ; int dataGoodBuffer [ 100 ] ;  data  =  dataBadBuffer  ; { int  source [ 100 ]  =  { 0 }  ;  memmove  ( data source  100  *  sizeof ( int )  ) ;  printIntLine  ( data [ 0 ] ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

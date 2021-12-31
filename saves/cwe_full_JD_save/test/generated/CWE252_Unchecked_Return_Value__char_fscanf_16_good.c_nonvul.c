@@ -1,0 +1,1 @@
+void name_0 ( ) { while ( 1 ) { { char  dataBuffer [ 100 ]  =  ""  ; char  * data  =  dataBuffer  ; if (   fscanf  ( stdin "%99s\0" data )  ==  EOF  ) { } } break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

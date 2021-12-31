@@ -1,0 +1,1 @@
+void name_0 ( ) { switch ( 6 ) { if (   wcslen  (  getenv  ( "PATH" ) default case 6 stdin )  !=  0  ) {  printLine  ( default ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

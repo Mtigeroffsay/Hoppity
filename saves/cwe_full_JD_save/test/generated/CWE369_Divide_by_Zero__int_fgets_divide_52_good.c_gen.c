@@ -1,0 +1,1 @@
+void name_0 ( int data ) {  name_1  ( data ) ; } void name_2 ( ) { int data ;  data  =  -  1   ; { short  data  =  ""  ; if (   fgets  ( inputBuffer CHAR_ARRAY_SIZE stdin )  !=  NULL  ) {  data  =   name_2  ( inputBuffer )  ; } else { } }  name_0  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

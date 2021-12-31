@@ -1,0 +1,1 @@
+void name_0 ( ) { if (  GLOBAL_CONST_FIVE  ==  5  ) { { long data ; long  * pointer  =  ( long * )   ALLOCA  ( sizeof ( long ) )   ;  data  =  5L  ;  *  pointer   =  data  ; { long  data  =  *  pointer   ;  printLongLine  ( data ) ; } } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

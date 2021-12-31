@@ -1,0 +1,1 @@
+void name_0 ( ) { int data ;  data  =  -  1   ; if (  globalReturnsTrue  ( ) ) {  data  =   CHAR_MAX  +  5   ; } { short  shortData  =  ( short )  data   ;  printShortLine  ( shortData ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

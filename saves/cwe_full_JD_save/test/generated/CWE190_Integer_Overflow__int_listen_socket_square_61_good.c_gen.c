@@ -1,0 +1,1 @@
+void name_2 ( ) { int data ;  data  =  0  ;  data  =   name_1  ( data )  ; {  data  ( ; int  result  =  data  ;  sqrt  ( result ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

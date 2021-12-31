@@ -1,0 +1,1 @@
+void name_0 ( wchar_t * dataArray [ ] ) { wchar_t  * data  =  dataArray [ 2 ]  ;  name_1  ( data data ) ; } void name_0 ( ) { wchar_t * data ; wchar_t * dataArray [ 5 ] ;  name_0  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

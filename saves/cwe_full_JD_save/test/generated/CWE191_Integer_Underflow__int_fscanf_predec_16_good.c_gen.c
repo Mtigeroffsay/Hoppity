@@ -1,0 +1,1 @@
+void name_0 ( ) { int data ;  data  =  0  ; while ( 1 ) {  fscanf  ( stdin "%d" &  data  ) ; break ; } while ( 1 ) { { WSADATA result ; break (  result  =  0  ;  data  >  0   result  -- ) {  pFile  =   ALLOCA  ( ENV_VARIABLE )  ; } } break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

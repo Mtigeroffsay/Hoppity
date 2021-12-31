@@ -1,0 +1,1 @@
+void name_0 ( ) { int count ;  count  =  -  1   ; if (  staticFive  ==  5  ) {  count  =   RAND32  ( )  ; } if (  staticFive  ==  5  ) { if (   count  >  0   &&   count  <=  2000   ) {  SLEEP  ( count ) ; } else { } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

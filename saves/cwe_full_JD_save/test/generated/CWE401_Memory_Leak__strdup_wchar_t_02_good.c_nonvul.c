@@ -1,0 +1,1 @@
+void name_0 ( ) { wchar_t * data ;  data  =  NULL  ; if ( 1 ) { { wchar_t myString [ ] = L "myString" ;  data  =   wcsdup  ( myString )  ;  printWLine  ( data ) ; } } if ( 1 ) {  free  ( data ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

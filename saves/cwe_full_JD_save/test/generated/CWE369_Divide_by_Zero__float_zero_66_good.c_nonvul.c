@@ -1,0 +1,1 @@
+void name_2 ( ) { float data ; float dataArray [ 5 ] ;  data  =  0.0F  ;  data  =  0.0F  ;  dataArray [ 2 ]  =  data  ;  name_1  ( dataArray ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

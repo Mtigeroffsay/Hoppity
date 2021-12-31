@@ -1,0 +1,1 @@
+void name_0 ( ) { int data ;  data  =  0  ; if (  staticFive  ==  5  ) {  data  =   RAND32  ( )  ; } if (  staticFive  ==  5  ) { if (  data  >  INT_MIN  ) { int  result  =   data  +  1   ;  printIntLine  ( result ) ; } else { } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { short data ;  data  =  -  1   ; if (  GLOBAL_CONST_FIVE  ==  5  ) {  data  =   CHAR_MAX  +  5   ; } { char  charData  =  ( char )  data   ;  printHexCharLine  ( charData ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

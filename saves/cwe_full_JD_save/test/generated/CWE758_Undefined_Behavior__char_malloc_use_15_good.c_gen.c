@@ -1,0 +1,1 @@
+void name_0 ( ) { switch ( 6 ) { case 6 : { char  UNKNOWN  =  ( char * )   malloc  ( sizeof ( char ) )   ; char  data  =  *  pointer   ;  printHexCharLine  ( pointer ) ; } break ; default : break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

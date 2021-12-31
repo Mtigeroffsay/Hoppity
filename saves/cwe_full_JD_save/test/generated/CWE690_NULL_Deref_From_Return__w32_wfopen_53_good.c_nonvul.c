@@ -1,0 +1,1 @@
+void name_0 ( FILE * data ) {  name_1  ( data ) ; } void name_2 ( ) { FILE * data ;  data  =  NULL  ; data = _wfopen ( L "file.txt" , L "w+" ) ;  name_0  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_2 ( ) { int data ;  data  =  -  1   ;  data  =   name_0  ( data )  ; if (  data  !=  -  1   ) {  CLOSE  ( data ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

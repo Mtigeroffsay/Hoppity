@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( globalTrue ) { { short  * name_1  =  NULL  ;  name_1  =  ( short * )   malloc  ( sizeof ( name_1 ) )   ; if (  name_1  ==  NULL  ) {  exit  ( -  1  ) ; }  name_2  =  5  ;  printShortLine  ( name_2 ) ;  free  ( name_1 ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { long data ; if (  GLOBAL_CONST_FIVE  ==  5  ) {  data  =  5L  ; } if (  GLOBAL_CONST_FIVE  ==  5  ) {  data  =  10L  ;  printLongLine  ( data ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

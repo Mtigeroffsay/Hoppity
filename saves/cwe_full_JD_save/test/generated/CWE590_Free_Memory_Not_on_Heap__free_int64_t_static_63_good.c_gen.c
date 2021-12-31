@@ -1,0 +1,1 @@
+void name_1 ( ) { int64_t * data ;  data  =  NULL  ; { int64_t dataBuffer [ 100 ] ; { size_t i ; for (  i  =  0  ;  i  <  100   i  ++ ) {  dataBuffer ++ i for  =  100  ; } }  data  =  dataBuffer  ; }  name_0  ( &  data  ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

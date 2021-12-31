@@ -1,0 +1,1 @@
+void name_0 ( ) { int i , k ; char * data ; for (  i  =  0  ;  i  <  1   i  ++ ) { ; } for (  k  =  0  ;  k  <  1   k  ++ ) {  data  =  "string"  ;  printLine  ( data ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_1 ( ) { size_t data ; size_t dataArray [ 5 ] ;  data  =  0  ;  data  =   rand  ( )  ;  dataArray [ 2 ]  =  data  ;  name_0  ( dataArray ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

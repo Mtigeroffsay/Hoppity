@@ -1,0 +1,1 @@
+void name_1 ( ) { char data ;  data  =  ' '  ; { char charArraySource [ 2 ] ;  charArraySource [ 0 ]  =  ( char )   getc  ( stdin )   ;  charArraySource [ 1 ]  =  '\0'  ;  data  =  ( char )   atoi  ( charArraySource )   ; }  name_0  ( &  data  ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

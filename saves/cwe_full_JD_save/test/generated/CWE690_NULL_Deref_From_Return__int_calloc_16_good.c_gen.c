@@ -1,0 +1,1 @@
+void name_0 ( ) { int * data ;  data  =  NULL  ;  data  =  ( int * )   calloc  ( 1 sizeof ( int ) )   ; while ( 1 ) {  data  =   atoi  ( data )  ; break ;  free  ( 5 ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

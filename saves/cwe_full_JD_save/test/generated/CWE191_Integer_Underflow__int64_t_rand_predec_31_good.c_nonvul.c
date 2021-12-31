@@ -1,0 +1,1 @@
+void name_0 ( ) { int64_t data ; data = 0L L ;  data  =  ( int64_t )   RAND64  ( )   ; { int64_t  dataCopy  =  data  ; int64_t  data  =  dataCopy  ; if (  data  >  LLONG_MIN  ) { --  data  ; int64_t  result  =  data  ;  printLongLongLine  ( result ) ; } else { } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

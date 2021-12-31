@@ -1,0 +1,1 @@
+void name_1 ( ) { float data ;  data  =  0.0F  ; { char inputBuffer [ CHAR_ARRAY_SIZE ] ; if (   fgets  ( inputBuffer CHAR_ARRAY_SIZE stdin )  !=  NULL  ) {  data  =  ( float )   atof  ( inputBuffer )   ; } else { } }  name_0  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

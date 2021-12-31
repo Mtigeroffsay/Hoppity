@@ -1,0 +1,1 @@
+void name_0 ( ) { goto sink ; sink : { int  count  =  0  ; do { if (  count  ==  COUNT_CHECK  ) { }  count  ++ ; } while (  1  ==  1  ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

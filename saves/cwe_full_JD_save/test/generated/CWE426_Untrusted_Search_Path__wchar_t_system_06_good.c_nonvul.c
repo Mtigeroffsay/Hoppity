@@ -1,0 +1,1 @@
+void name_0 ( ) { wchar_t * data ; wchar_t dataBuffer [ 100 ] = L "" ;  data  =  dataBuffer  ; if (  STATIC_CONST_FIVE  ==  5  ) {  wcscpy  ( data GOOD_OS_COMMAND ) ; } if (   SYSTEM  ( data )  <=  0  ) {  exit  ( 1 ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

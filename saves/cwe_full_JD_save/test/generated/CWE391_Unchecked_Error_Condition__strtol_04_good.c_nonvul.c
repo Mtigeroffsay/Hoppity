@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( STATIC_CONST_TRUE ) { { long longNumber ;  errno  =  0  ;  longNumber  =   strtol  ( "0xfffffffff" NULL 0 )  ; if (  errno  ==  ERANGE  ) {  exit  ( 1 ) ; }  printf  ( "%li\n" longNumber ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { twoIntsStruct data ; if ( STATIC_CONST_TRUE ) { ; } if ( STATIC_CONST_TRUE ) {  printIntLine  ( data . data . ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

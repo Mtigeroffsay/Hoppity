@@ -1,0 +1,1 @@
+void name_0 ( ) { char * data ;  data  =  NULL  ;  data  =  ( char * )   realloc  ( data  20  *  sizeof ( char )  )   ; if (  globalFive  ==  5  ) {  printLine  ( data ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

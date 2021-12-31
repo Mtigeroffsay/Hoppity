@@ -1,0 +1,1 @@
+int staticReturnsTrue ( ) { return 1 ; } int staticReturnsFalse ( ) { return 0 ; } void name_0 ( ) { int64_t data ; if (  staticReturnsTrue  ( ) ) { ; } if (  staticReturnsTrue  ( ) ) { data = 5L L ;  printLongLongLine  ( data ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

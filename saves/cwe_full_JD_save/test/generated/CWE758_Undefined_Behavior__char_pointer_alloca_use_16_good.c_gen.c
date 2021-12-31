@@ -1,0 +1,1 @@
+void name_0 ( ) { while ( 1 ) { { char  UNKNOWN  =  ( char * * )   ALLOCA  ( sizeof ( char * ) )   ; char  * pointer  =  *  pointer   ;  printLine  ( data ) ; } break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

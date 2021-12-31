@@ -1,0 +1,1 @@
+void name_0 ( ) { double * data ; double dataUninitArray [ 10 ] ;  data  =  dataUninitArray  ; ; { int i ; for (  i  =  0  ;  i  <  10   i  ++ ) {  printDoubleLine  ( data [ i ] ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

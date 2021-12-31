@@ -1,0 +1,1 @@
+void name_0 ( ) { wchar_t * data ;  data  =  =  ; if ( 1 ) { {  myString  =  data  ; } } if ( 1 ) {  ALLOCA  ( data ) ; } } void main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

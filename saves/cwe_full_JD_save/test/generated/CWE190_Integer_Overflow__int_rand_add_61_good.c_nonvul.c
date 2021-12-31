@@ -1,0 +1,1 @@
+int name_0 ( int data ) {  data  =   RAND32  ( )  ; return data ; } void name_1 ( ) { int data ;  data  =  0  ;  data  =   name_0  ( data )  ; if (  data  <  INT_MAX  ) { int  result  =   data  +  1   ;  printIntLine  ( result ) ; } else { } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

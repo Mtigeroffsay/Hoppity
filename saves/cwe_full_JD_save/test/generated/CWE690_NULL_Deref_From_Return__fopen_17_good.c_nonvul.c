@@ -1,0 +1,1 @@
+void name_0 ( ) { int k ; FILE * data ;  data  =  NULL  ;  data  =   fopen  ( "file.txt" "w+" )  ; for (  k  =  0  ;  k  <  1   k  ++ ) { if (  data  !=  NULL  ) {  fclose  ( data ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

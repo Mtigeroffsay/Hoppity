@@ -1,0 +1,1 @@
+void name_0 ( ) { wchar_t * data ;  data  =  NULL  ; if (  globalFive  ==  5  ) { { wchar_t myString [ ] = L "myString" ; } } if (  globalFive  ==  5  ) {  free  ( data ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

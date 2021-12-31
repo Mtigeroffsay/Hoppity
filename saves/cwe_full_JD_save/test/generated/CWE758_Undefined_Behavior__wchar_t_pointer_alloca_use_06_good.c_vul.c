@@ -1,0 +1,1 @@
+void name_0 ( ) { if (  STATIC_CONST_FIVE  ==  5  ) { { wchar_t  * * pointer  =  ( wchar_t * * )   ALLOCA  ( sizeof ( wchar_t * ) )   ; wchar_t  * pointer  =  *  pointer   ;  printWLine  ( data ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

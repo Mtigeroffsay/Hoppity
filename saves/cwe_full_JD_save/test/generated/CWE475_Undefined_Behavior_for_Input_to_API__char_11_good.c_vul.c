@@ -1,0 +1,1 @@
+void name_0 ( ) { if (  globalReturnsTrue  ( ) ) { { char  dataBuffer [ 100 ]  =  ""  ; char  * data  =  dataBuffer  ;  strcpy  ( data "abcdefghijklmnopqrstuvwxyz" ) ;  memcpy  (  data  +  6   data  +  4   10  *  sizeof ( char )  ) ;  printLine  ( data ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

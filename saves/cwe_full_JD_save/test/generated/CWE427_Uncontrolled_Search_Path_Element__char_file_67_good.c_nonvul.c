@@ -1,0 +1,1 @@
+void name_1 ( ) { char * data ; CWE427_Uncontrolled_Search_Path_Element__char_file_67_structType myStruct ; char  dataBuffer [ 250 ]  =  "PATH="  ;  data  =  dataBuffer  ;  strcat  ( data NEW_PATH ) ;   myStruct  .  structFirst   =  data  ;  name_0  ( myStruct ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

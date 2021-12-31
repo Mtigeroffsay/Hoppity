@@ -1,0 +1,1 @@
+void name_1 ( ) { FILE * data ;  data  =  NULL  ;  data  =   name_0  ( data )  ; if (  data  !=  NULL  ) {  _close  ( ( int )  data  ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

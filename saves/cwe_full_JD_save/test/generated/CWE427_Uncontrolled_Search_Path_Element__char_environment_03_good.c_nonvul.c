@@ -1,0 +1,1 @@
+define GETENV getenv define GETENV getenv void name_0 ( ) { char * data ; char    =  "PATH="  ;  data  =  dataBuffer  ; if (  5  ==  5  ) {  strcat  ( data NEW_PATH ) ; }  PUTENV  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { int64_t data ; data = 0L L ; if ( GLOBAL_CONST_TRUE ) { fscanf ( stdin , "%" SCNd64 , & data ) ; } if ( GLOBAL_CONST_TRUE ) { { ++  data  ; int64_t  result  =  data  ;  printLongLongLine  ( result ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { while ( 1 ) { if (   fwrite  ( ( char * )  "string"  sizeof ( char )  strlen  ( "string" ) stdout )  !=   strlen  ( "string" )  ) {  printIntLine  ( *  stdout  ) ; } break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( int64_t * data ) { ; } void name_2 ( int64_t * data ) {  name_0  ( data ) ; } void name_3 ( ) { int64_t * data ; int64_t dataBadBuffer [ 50 ] ; int64_t dataGoodBuffer [ 100 ] ;  data  =  dataGoodBuffer  ;  name_2  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_3  ( ) ; return 0 ; } 

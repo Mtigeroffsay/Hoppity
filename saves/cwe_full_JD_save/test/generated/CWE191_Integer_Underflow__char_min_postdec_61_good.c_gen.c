@@ -1,0 +1,1 @@
+void name_2 ( ) { char data ;  data  =  ' '  ;  data  =   name_1  ( data )  ; {  data  -- ; char  data  =  data  ;  printHexCharLine  ( result ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

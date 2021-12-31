@@ -1,0 +1,1 @@
+void name_1 ( ) { char * password ; char  passwordBuffer [ 100 ]  =  ""  ;  password  =  passwordBuffer  ;  strcpy  ( password PASSWORD ) ;  name_0  ( &  password  ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

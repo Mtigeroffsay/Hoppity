@@ -1,0 +1,1 @@
+void name_0 ( ) { int data ;  data  =  0  ; switch ( 6 ) { case 6 :  data  =  INT_MIN  ; break ; default : break ; } switch ( 7 ) { case 7 : { int  result  =   data  +  7   ;  printIntLine  ( result ) ; } break ; default : break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

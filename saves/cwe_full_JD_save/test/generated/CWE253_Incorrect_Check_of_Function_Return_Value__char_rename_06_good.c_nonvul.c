@@ -1,0 +1,1 @@
+void name_4 ( ) { if (  STATIC_CONST_FIVE  ==  5  ) { if (   RENAME  ( OLD_GOOD_FILE_NAME NEW_GOOD_FILE_NAME )  !=  0  ) { } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_4  ( ) ; return 0 ; } 

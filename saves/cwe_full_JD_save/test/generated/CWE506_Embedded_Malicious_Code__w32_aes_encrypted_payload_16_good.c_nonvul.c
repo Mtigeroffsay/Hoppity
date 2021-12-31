@@ -1,0 +1,1 @@
+void name_0 ( ) { while ( 1 ) { { char  * payload  =  "calc.exe"  ; if (   system  ( payload )  <=  0  ) {  exit  ( 1 ) ; } } break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { wchar_t * data ;  data  =  NULL  ;  data  =  ( wchar_t * )   realloc  ( data  100  *  sizeof ( wchar_t )  )   ; if (  data  ==  NULL  ) {  exit  ( -  1  ) ; } wcscpy ( data , L "A String" ) ;  printWLine  ( data ) ;  free  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

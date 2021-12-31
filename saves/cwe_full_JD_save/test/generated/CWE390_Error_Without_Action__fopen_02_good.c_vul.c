@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( 1 ) { { FILE  * fileDesc  =  NULL  ;  fileDesc  =   fopen  ( "file.txt" "w+" )  ; if (  fileDesc  ==  NULL  ) { }  fclose  ( fileDesc ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

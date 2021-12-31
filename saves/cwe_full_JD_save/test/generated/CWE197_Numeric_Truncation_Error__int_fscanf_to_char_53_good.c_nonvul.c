@@ -1,0 +1,1 @@
+void name_1 ( ) { int data ;  data  =  -  1   ;  data  =   CHAR_MAX  +  5   ;  name_0  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

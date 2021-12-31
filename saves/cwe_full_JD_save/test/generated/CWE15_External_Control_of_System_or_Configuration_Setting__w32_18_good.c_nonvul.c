@@ -1,0 +1,1 @@
+void name_0 ( ) { char * data ; char  dataBuffer [ 100 ]  =  ""  ;  data  =  dataBuffer  ; goto source ; source :  strcpy  ( data "hostname" ) ; if ( !   SetComputerNameA  ( data )  ) {  exit  ( 1 ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

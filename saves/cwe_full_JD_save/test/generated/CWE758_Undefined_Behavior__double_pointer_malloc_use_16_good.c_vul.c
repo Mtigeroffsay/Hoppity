@@ -1,0 +1,1 @@
+void name_0 ( ) { while ( 1 ) { { double  * * pointer  =  ( double * * )   malloc  ( sizeof ( double * ) )   ; if (  pointer  ==  NULL  ) {  exit  ( -  1  ) ; } double  * pointer  =  *  pointer   ;  free  ( pointer ) ;  printDoubleLine  ( *  data  ) ; } break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { if (  globalReturnsTrue  ( ) ) { { wchar_t dataBuffer [ 100 ] = L "" ; wchar_t  * data  =  dataBuffer  ; if (   fread  ( ( wchar_t * )  data  sizeof ( wchar_t ) ( size_t ) (  100  +  1  ) stdin )  ==  0  ) { } } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

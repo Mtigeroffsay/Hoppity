@@ -1,0 +1,1 @@
+int main ( ) { return 1 ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ; return 0 ; } 

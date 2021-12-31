@@ -1,0 +1,1 @@
+void name_0 ( int data ) {  name_1  ( data ) ; } void name_2 ( int data ) {  name_0  ( data ) ; } void name_4 ( ) { int data ;  data  =  -  1   ;  data  =   SHRT_MAX  +  5   ;  name_3  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_4  ( ) ; return 0 ; } 

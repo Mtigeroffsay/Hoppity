@@ -1,0 +1,1 @@
+void name_0 ( short data ) { if (  data  <  0  ) { if (  data  > (  SHRT_MIN  *  2  ) ) { short  result  =   data  *  2   ;  printIntLine  ( result ) ; } else { } } } void name_1 ( ) { short data ;  data  =  0  ;  data  =  SHRT_MIN  ;  name_0  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

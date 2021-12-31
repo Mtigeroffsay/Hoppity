@@ -1,0 +1,1 @@
+void name_0 ( ) { if (  5  ==  5  ) { { double  * * pointer  =  ( double * * )   ALLOCA  ( sizeof ( double * ) )   ; double  * pointer  =  *  pointer   ;  printDoubleLine  ( *  data  ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

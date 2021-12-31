@@ -46,9 +46,15 @@ def printTree2(node):
 def sample_gen(s_list):
     yield s_list
 
+
+def get_gt_edit_len(sample_list):
+    return [len(sample.g_edits) for sample in sample_list]
+
+
 #either input a list of inputs or just generate some from the test set 
 if not cmd_args.sample_list:
-    val_gen = dataset.data_gen(cmd_args.batch_size, phase=phase, infinite=False)
+    train_gen = dataset.data_gen(cmd_args.batch_size, phase='train', infinite=False)
+    test_gen = dataset.data_gen(cmd_args.batch_size, phase='test', infinite=False)
 else:
     new_sample_list = []
     for sample in cmd_args.sample_list:
@@ -65,322 +71,70 @@ if cmd_args.rand:
 model.load_state_dict(torch.load(cmd_args.target_model))
 model.eval()
 
-op_acc, loc_acc_op, val_acc_op, type_acc_op, true_ops, cor_ops = setup_dicts()
-total_num_samples = 0
-total_acc, total_loc_acc, total_val_acc, total_type_acc, total_op_acc = 0, 0, 0, 0, 0
 
-_t =0
-count = 0
-type_count = 0
-val_count = 0
-loc_count = 0
-unk_count = 0
-
-bug_dict = {}
-
-unique_edit = 0
-
-if cmd_args.output_all:
-    open("cor_prefixes.txt", "w").close()
-    open("wrong_prefixes.txt", "w").close()
-
-print("Beam agg", cmd_args.beam_agg)
-
-fres=open(cmd_args.save_dir+"/res.txt","w",encoding="ascii",buffering=1)
+###### test statistics
+'''
+edit_len_list = []
+edit_len_list_gt = []
 
 
-
-iii=0
-for sample_list in tqdm(val_gen):
-    iii+=1
-    total_num_samples += len(sample_list)
-    #print(sample_list[0].buggy_file)
-    ll_total = [[] for i in range(len(sample_list))]
-    new_asts_total = [[] for i in range(len(sample_list))]
-    # try:
-    if cmd_args.beam_agg:
-        for b in range(1, cmd_args.beam_size+1):
-            ll, new_asts = model(sample_list, phase='test', beam_size=b, pred_gt=False, op_given=cmd_args.op_given, loc_given=cmd_args.loc_given)
-        
-            b_edits = new_asts[0]
-
-            assert len(ll) == b * len(sample_list)
-
-            for i in range(0, len(sample_list)):
-                start_idx = i*b
-                end_idx = start_idx + b
-
-                s_ll = ll[start_idx:end_idx].tolist()
-                ll_total[i] += s_ll
-
-                s_asts = new_asts[i]
-                new_asts_total[i] += s_asts
-
-        ll, new_asts = get_top_k(ll_total, new_asts_total, len(sample_list), cmd_args.beam_size)
-    else:
-        try:
-            ll, new_asts = model(sample_list, phase='test', beam_size=cmd_args.beam_size, pred_gt=False, op_given=cmd_args.op_given, loc_given=cmd_args.loc_given)
-            contents = [s.buggy_code_graph.contents.keys() | Dataset._value_vocab.keys() for s in sample_list]
-        except:
-            try:
-                del ll,new_asts
-            except:
-                pass
-            new_asts=None
-            torch.cuda.empty_cache()
-            gc.collect()
-    # except:
-    #     new_asts=None
-    # pdb.set_trace()
-    #dataset_stats
-    # if cmd_args.max_modify_steps == 1:
-    #     sample_true_ops = [s.g_edits[0].op for s in sample_list]
-    #     for op in sample_true_ops:
-    #         true_ops[op] += 1
-    # else:
-    #     sample_true_ops = [len(s.g_edits) for s in sample_list]
-    #     for op in sample_true_ops:
-    #         true_ops[op] += 1
-
-    # num_nodes = [s.fixed_ast.num_nodes for s in sample_list]
-    # acc_lst,cands= ast_acc_cnt(new_asts, [s.fixed_ast for s in sample_list], contents)
-    
-    acc_lst=[]
-    for i,s in enumerate(sample_list):
-        file_name=s.buggy_file.split('/')[-1]
-        file_name=file_name.replace("SHIFT_","")
-        file_name=file_name.replace("_fixed.pkl","")
-        
-        fnon_vul=open(cmd_args.save_dir+"/generated/"+file_name+"_nonvul.c","w",encoding="ascii")
-
-        tokenList=[]
-        printTree(s.buggy_ast.root_node,tokenList)
-        for token in tokenList:
-            fnon_vul.write(token+" ")
-
-        # for j,node in enumerate(s.buggy_ast.nodes):
-        #     if type(node.value)==str:
-        #         fnon_vul.write(node.value+" ")
-        fnon_vul.close()
-        
-        fvul=open(cmd_args.save_dir+"/generated/"+file_name+"_vul.c","w",encoding="ascii")
-        tokenList=[]
-        printTree(s.fixed_ast.root_node,tokenList)
-        for token in tokenList:
-            fvul.write(token+" ")
-        vulTokenList=tokenList
-        # for j,node in enumerate(s.fixed_ast.nodes):
-        #     if type(node.value)==str:
-        #         fvul.write(node.value+" ")
-        fvul.close()
-
-        fgen=open(cmd_args.save_dir+"/generated/"+file_name+"_gen.c","w",encoding="ascii")
-        # if cands[i]<0:
-        #     cands[i]=0
-        if new_asts!=None:
-            succ=False
-            for cand in new_asts[i]:
-                tokenList=[]
-                printTree(cand.root_node,tokenList)
-                #pdb.set_trace()
-                if tokenList==vulTokenList:
-                    succ=True
-                    acc_lst.append(1)
-                    for token in tokenList:
-                        fgen.write(token+" ")
-                    break
-            if not succ:
-                acc_lst.append(0)
-                tokenList=[]
-                printTree(new_asts[i][0].root_node,tokenList)
-                for token in tokenList:
-                    fgen.write(token+" ")
-            # for j,node in enumerate(new_asts[i][cands[i]].nodes):
-            #     if type(node.value)==str:
-            #         fgen.write(node.value+" ")
-            fgen.close()
-            fres.write(file_name+" "+str(acc_lst[i])+"\n")
-        else:
-            fres.write(file_name+" 0\n")
-    del new_asts,new_asts_total
-        #pdb.set_trace()
+for sample_list in tqdm(test_gen):
+    _, _, stop_steps_batch, _ = model(sample_list, phase='test', beam_size=cmd_args.beam_size, pred_gt=False, op_given=cmd_args.op_given, loc_given=cmd_args.loc_given)
+    edit_len_list += stop_steps_batch
+    del stop_steps_batch
+    el_batch_gt = get_gt_edit_len(sample_list)
+    edit_len_list_gt += el_batch_gt
+    del el_batch_gt
 
 
-        #pdb.set_trace()
-    # if cmd_args.max_modify_steps == 1:
-    #     ops = [s.g_edits[0].op for (acc, s) in zip(acc_lst, sample_list) if acc]
-    #     for op in ops:
-    #         cor_ops[op] += 1
-    # else:
-    #     ops = [len(s.g_edits) for (acc, s) in zip(acc_lst, sample_list) if acc]
-    #     for op in ops:
-    #         cor_ops[op] += 1
-    
-    # acc = sum(acc_lst)
-    # total_acc += acc
-
-    # cor_prefixes = [s.f_bug for (acc, s) in zip(acc_lst, sample_list) if acc]
-    # wrong_prefixes = [s.f_bug for (acc, s) in zip(acc_lst, sample_list) if not acc]
-
-    # if cmd_args.output_all:
-    #     out_str = ""
-    #     for prefix in cor_prefixes:
-    #         out_str += str(prefix) + "\n"
-
-    #     w_out_str = ""
-    #     for prefix in wrong_prefixes:
-    #         w_out_str += str(prefix) + "\n"
-
-    #     with open("cor_prefixes.txt", "a") as f:
-    #         f.write(out_str)
-
-    #     with open("wrong_prefixes.txt", "a") as f:
-    #         f.write(w_out_str)
-
-    
-    # new_edits = []
-    # for ast in new_asts:
-    #     ast_edits = [x.get_edits() if x.get_edits() else [GraphEditCmd("NoOp")] for x in ast[:cmd_args.topk]]
-    #     new_edits.append(ast_edits)
-
-    # true_edits = [s.g_edits for s in sample_list]
-    # #pdb.set_trace()
-
-    # total_op_acc += op_acc_cnt(new_edits, true_edits)
-    # total_loc_acc += loc_acc_cnt(new_edits, true_edits)
-    # loc_count += 1
-
-    # for edit in true_edits:
-    #     for e in edit:
-    #         if hasattr(e, "node_name") and e.node_name == "UNKNOWN":
-    #             unk_count += 1
-
-    # val_acc = val_acc_cnt(new_edits, true_edits, contents)
-    # if val_acc >= 0:
-    #     val_count += 1
-    #     total_val_acc += val_acc
-
-    # type_acc = type_acc_cnt(new_edits, true_edits)
-    #print(new_edits, true_edits, type_acc)
-    #pdb.set_trace()
-    '''
-    for e_idx, e in enumerate(true_edits):
-        for s_idx, step in enumerate(e):
-            if step.op == OP_REPLACE_TYPE or step.op == OP_ADD_NODE:
-                true_type = step.node_type
-
-                p_type = new_edits[e_idx][s_idx][0].node_type if len(new_edits[e_idx]) > s_idx and (new_edits[e_idx][s_idx][0].op == OP_REPLACE_TYPE or new_edits[e_idx][s_idx][0].op == OP_ADD_NODE) else None
-
-                if true_type == p_type:
-                    _t += 1
-                
-                type_count += 1
-     '''
-
-    # if type_acc >= 0:
-    #     total_type_acc += type_acc
-    #     type_count += 1
-
-    # if cmd_args.max_modify_steps == 1:
-    #     for OP in [OP_ADD_NODE, OP_REPLACE_VAL, OP_REPLACE_TYPE, OP_DEL_NODE, OP_NONE]:
-    #         idxs = [ i for i in range(0, len(sample_list)) if sample_list[i].g_edits[0].op == OP ]
-    #         pred_ops = [ new_edits[i][0][0].op if new_edits[i][0]  else OP_NONE for i in idxs ]
-
-    #         op_acc[OP]["total_op"] += len(idxs)
-
-    #         for OP2 in [OP_ADD_NODE, OP_REPLACE_VAL, OP_REPLACE_TYPE, OP_DEL_NODE, OP_NONE]:
-    #             op_acc[OP][OP2] += len([ op for op in pred_ops if op == OP2 ])
-
-    #         loc_acc_idxs = [ loc_acc_cnt([new_edits[i]], [sample_list[i].g_edits]) for i in idxs ]
-    #         loc_acc_op[OP] += sum(loc_acc_idxs)
-
-    #         if OP in type_acc_op:
-    #             type_acc_op[OP] += sum([ type_acc_cnt([new_edits[i]], [sample_list[i].g_edits]) for i in idxs ])
-
-    #         if OP in val_acc_op:
-    #             val_acc_op[OP] += sum([ val_acc_cnt([new_edits[i]], [sample_list[i].g_edits], contents) for i in idxs ])
-
-    # else:
-    #     for i in range(0, cmd_args.max_modify_steps+1):
-    #         idxs = [ i for i in range(0, len(sample_list)) if len(sample_list[i].g_edits) == i ]
-    #         pred_ops = [len(new_edits[i][0]) for i in idxs]
-    #         op_acc[i]["total_op"] += len(idxs)
-
-    #         for j in range(0, cmd_args.max_modify_steps+1):
-    #             op_acc[i][j] += len([ op for op in pred_ops if op == j])
-
-    #         loc_acc_idxs = [ loc_acc_cnt([new_edits[i]], [sample_list[i].g_edits]) for i in idxs ]
-    #         loc_acc_op[i] += sum(loc_acc_idxs)
-
-    #         #type_acc_op[i] += sum([ type_acc_cnt([new_edits[i]], [sample_list[i].g_edits]) for i in idxs ])
-    #         #val_acc_op[i] += sum([ val_acc_cnt([new_edits[i]], [sample_list[i].g_edits], contents) for i in idxs ])
-
-    # count += 1
-
-print('total accuracy %.4f\n' % (total_acc / total_num_samples))
-
-# final_loc_acc = total_loc_acc / loc_count
-# if cmd_args.loc_acc:
-#     print('location accuracy %.4f' % (final_loc_acc))
-
-# final_op_acc = total_op_acc / total_num_samples
-# if cmd_args.op_acc:
-#     print('op accuracy %.4f' % (final_op_acc))
-
-# final_val_acc = total_val_acc / val_count
-# if cmd_args.val_acc:
-#     print('value accuracy %.4f' % (final_val_acc))
-
-# final_type_acc = total_type_acc / type_count if type_count > 0 else 0
-# if cmd_args.type_acc:
-#     print('type accuracy %.4f' % (final_type_acc))
+fres=open(cmd_args.save_dir+"/test_edit_lengths.txt","w",encoding="ascii",buffering=1)
+fres.write("test set statistics:\n")
+fres.write(f"total number of files: %d\n" %len(edit_len_list_gt))
+fres.write("predicted edit sequences:\n")
+fres.write(f"mean edit length: %.2f\n" %np.mean(edit_len_list))
+fres.write(f"edit length std: %.2f\n" %np.std(edit_len_list))
+fres.write("ground truth edit sequences:\n")
+fres.write(f"mean edit length: %.2f\n" %np.mean(edit_len_list_gt))
+fres.write(f"edit length std: %.2f\n" %np.std(edit_len_list_gt))
+fres.close()
 
 
-# if cmd_args.op_breakdown:
-#     if cmd_args.max_modify_steps == 1:
-#         op_lst = [OP_ADD_NODE, OP_REPLACE_VAL, OP_REPLACE_TYPE, OP_DEL_NODE, OP_NONE]
-#     else:
-#         op_lst = range(0, cmd_args.max_modify_steps+1)
+print("test set evaluation complete!")
 
-#     for op in op_lst:
-#         print("\n" + str(op), "accuracy")
-#         for k, v in op_acc[op].items():
-#             print(k, v)
+print("edit length (prediction & ground truth):")
+print(edit_len_list)
+print(edit_len_list_gt)
+'''
+###### training statistics
 
-#         if loc_acc_op[op] == 0 or true_ops[op] == 0:
-#             print()
-#             continue
+edit_len_list = []
+edit_len_list_gt = []
 
-#         print("loc acc %.4f, total: %d" % ((loc_acc_op[op] / true_ops[op]), loc_acc_op[op]))
+for sample_list in tqdm(train_gen):
+    #ll, new_asts, stop_steps_batch, reg_batch_raw = model(sample_list, phase='test', beam_size=cmd_args.beam_size, pred_gt=False, op_given=cmd_args.op_given, loc_given=cmd_args.loc_given)
+    #edit_len_list += stop_steps_batch
+    el_batch_gt = get_gt_edit_len(sample_list)
+    edit_len_list_gt += el_batch_gt
+    del el_batch_gt
 
-#         if op in val_acc_op:
-#             print("val acc %.4f, total: %d"  % ((val_acc_op[op] / true_ops[op]), val_acc_op[op]))
+'''
+fres=open(cmd_args.save_dir+"/train_edit_lengths.txt","w",encoding="ascii",buffering=1)
+fres.write("training set statistics:\n")
+fres.write(f"total number of files: %d\n" %len(edit_len_list_gt))
+#fres.write("predicted edit sequences:\n")
+#fres.write(f"mean edit length: %.2f\n" %np.mean(edit_len_list))
+#fres.write(f"mean edit length: %.2f\n" %np.std(edit_len_list))
+fres.write("ground truth edit sequences:\n")
+fres.write(f"mean edit length: %.2f\n" %np.mean(edit_len_list_gt))
+fres.write(f"edit length std: %.2f\n" %np.std(edit_len_list_gt))
+fres.close()
+'''
+print(np.min(edit_len_list_gt))
+print(np.max(edit_len_list_gt))
+print(np.std(edit_len_list_gt))
+print("training set evaluation complete!")
+'''
+print("edit length (ground truth):")
+print(edit_len_list_gt)
+'''
 
-#         if op in type_acc_op:
-#             print("type acc %.4f, total: %d" % ((type_acc_op[op] / true_ops[op]), type_acc_op[op]))
-#         print()
-
-# if cmd_args.dataset_stats:
-#     print("\ntotal true op dataset statistics")
-#     for k, v in true_ops.items():
-#         print(k, v)
-
-# fname = str(time()).replace(".", "_")
-# f_args = os.path.expanduser(os.path.join(cmd_args.eval_dump_folder, fname + "_args.npy"))
-# np.save(f_args, cmd_args)
-
-# output_dict = {}
-# output_dict["phase"] = phase
-# output_dict["val_acc"] = final_val_acc
-# output_dict["type_acc"] = final_type_acc
-# output_dict["loc_acc"] = final_loc_acc
-# output_dict["op_acc"] = final_op_acc
-# output_dict["op_breakdown"] = op_acc
-# output_dict["true_ops"] = true_ops
-
-# f_output_dict = os.path.expanduser(os.path.join(cmd_args.eval_dump_folder, fname + "_dump.npy"))
-# np.save(f_output_dict, output_dict)
-
-
-# print("number of unique edits", unique_edit, "total samples", total_num_samples)
-# print("number of unknowns", unk_count)

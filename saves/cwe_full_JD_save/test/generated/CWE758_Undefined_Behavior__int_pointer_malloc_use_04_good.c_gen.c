@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( STATIC_CONST_TRUE ) { { int ; int  * pointer  =  *  pointer   ;  pointer  =   free  ( pointer 1 )  ; if (  data  ==   5  *  5  ) ) {  printIntLine  ( data ) ; } } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

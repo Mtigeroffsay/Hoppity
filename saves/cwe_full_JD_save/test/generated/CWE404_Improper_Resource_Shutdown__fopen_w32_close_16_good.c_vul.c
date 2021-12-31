@@ -1,0 +1,1 @@
+void name_0 ( ) { FILE * data ;  data  =  NULL  ;  data  =   fopen  ( "BadSource_fopen.txt" "w+" )  ; while ( 1 ) { if (  data  !=  NULL  ) {  _close  ( ( int )  data  ) ; } break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

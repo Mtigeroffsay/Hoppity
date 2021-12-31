@@ -1,0 +1,1 @@
+void name_0 ( ) { if (  STATIC_CONST_FIVE  ==  5  ) { { char  charStack  =  'a'  ; char  * charPointer  =  &  charStack   ;  printHexCharLine  ( *  charPointer  ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { unsigned int data ;  data  =  0  ; goto source ; source :  data  =  UINT_MAX  ; goto sink ; sink : if (  data  <  UINT_MAX  ) { ++  data  ; unsigned  data  =  data  ;  printUnsignedLine  ( result ) ; } else { } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

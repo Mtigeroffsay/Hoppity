@@ -19,6 +19,8 @@ from gtrans.common.code_graph import CgNode
 from gtrans.model.utils import AutoregModel, adjust_refs, adjust_attr_order, get_randk, get_rand_one
 from torchext import jagged_log_softmax, jagged_argmax, jagged_topk, jagged_append, jagged2padded
 
+import pdb
+
 class GraphOp(AutoregModel):
     def __init__(self, args, op_name=None):
         super(GraphOp, self).__init__()
@@ -55,7 +57,150 @@ class GraphOp(AutoregModel):
             else:
                 num_options.append(tmp_prefix[i] - tmp_prefix[i - 1])
         return num_options
+    
+    def get_node(self, node_embedding, fn_node_select,
+                 target_indices=None,
+                 const_node_embeds=None,
+                 const_nodes=None,
+                 fn_const_node_pred=None,
+                 beam_size=1):
+        if target_indices is not None:
+            beam_size = 1
+        node_indices = []
+        offset = 0
+        local_target_indices = None if target_indices is None else []
+        num_const_nodes = 0 if const_node_embeds is None else const_node_embeds.shape[0]
 
+        node_of_graph_idx = []
+        list_prefix_sum = []
+        old_offsets = []
+        
+        
+        for g_idx, gnn_g in enumerate(self.sample_buf):
+            
+            cur_size = len(node_indices)
+            old_offsets.append(offset)
+            for i, node in enumerate(gnn_g.pg.node_list):
+                if fn_node_select(g_idx, node):
+                    if local_target_indices is not None and i == target_indices[g_idx]:
+                        local_target_indices.append(len(node_indices) + g_idx * num_const_nodes)
+                    node_indices.append(offset + i)
+            if local_target_indices is not None and target_indices[g_idx] and target_indices[g_idx] >= gnn_g.num_nodes:  # this is referring to a global const node
+                local_target_indices.append(len(node_indices) + g_idx * num_const_nodes + target_indices[g_idx] - gnn_g.num_nodes)
+            num_candidates = len(node_indices) - cur_size
+
+            node_of_graph_idx += [g_idx] * num_candidates
+            list_prefix_sum.append(len(node_indices))
+            offset += gnn_g.pg.num_nodes
+        prefix_sum = torch.LongTensor(list_prefix_sum).to(node_embedding.device)
+        node_of_graph_idx = torch.LongTensor(node_of_graph_idx).to(node_embedding.device)
+        node_embedding = torch.index_select(node_embedding, 0, torch.LongTensor(node_indices).to(node_embedding.device))
+        
+        
+        # do the inner product
+        rep_states = torch.index_select(self.states, 0, node_of_graph_idx)
+        if rep_states.shape[0]:
+            logits = self.comp_func(rep_states, node_embedding)
+        else:
+            logits = None
+        if num_const_nodes:
+            consts_logits = fn_const_node_pred(self.states)
+            if logits is None:
+                logits = consts_logits.view(-1)
+            else:
+                logits = jagged_append(logits, prefix_sum, consts_logits)
+            prefix_correction = [num_const_nodes * (i + 1) for i in range(len(self.sample_buf))]
+            prefix_correction = torch.LongTensor(prefix_correction).to(node_embedding.device)
+            prefix_sum = prefix_sum + prefix_correction
+        
+        #### prefix_sum records the ending index for each sample in the batch
+        ll_all = jagged_log_softmax(logits, prefix_sum)
+
+        if beam_size == 1:
+            if local_target_indices is None:
+                if self.rand_flag:
+                    num_options = self._get_num_options(prefix_sum)
+                    indices = [np.random.randint(i) for i in num_options]
+                    indices = torch.LongTensor(indices).to(ll_all.device)
+                else:
+                    indices = jagged_argmax(ll_all, prefix_sum)
+                indices[1:] += prefix_sum[:-1]
+                indices = indices.detach()
+            else:
+                assert len(local_target_indices) == len(self.sample_buf)
+                indices = torch.LongTensor(local_target_indices).to(node_embedding.device)
+            ### ll_to_add contains log probs of location selection for batch
+            ll_to_add = ll_all[indices]
+
+            if isinstance(self.ll, np.ndarray):
+                ll_to_add = ll_to_add.cpu().data.numpy()
+            self.ll = self.ll + ll_to_add
+            prefix_sum = [0] + prefix_sum.data.cpu().numpy().tolist()[:-1]
+            old_sample_ids = range(len(self.sample_buf))
+        else:
+            if self.rand_flag:
+                pad_val = np.finfo(np.float32).min
+                padded_val = jagged2padded(ll_all, prefix_sum, pad_val)
+                num_options = self._get_num_options(prefix_sum)
+                op_lim = min(num_options)
+                k = min(op_lim, beam_size)
+                indices = []
+                step_ll = []
+                np_ll = padded_val.cpu().data.numpy()
+                for i in enumerate(num_options):
+                    x_p = list(range(num_options[i]))
+                    random.shuffle(x_p)
+                    li = x_p[:k]
+                    ls = []
+                    for j in li:
+                        ls.append(np_ll[i, j])
+                    step_ll.append(ls)
+                    indices.append(li)
+                    
+                step_ll = torch.FloatTensor(step_ll).to(ll_all.device)
+                
+                step_choices = torch.LongTensor(indices).to(ll_all.device)
+            else:
+                step_ll, step_choices = jagged_topk(ll_all, prefix_sum, beam_size)
+
+            indices, old_sample_ids = self.update_beam_stats(step_choices, step_ll, beam_size, prefix_sum)
+            buf_prefix = [0] + list_prefix_sum
+            prefix_sum = [buf_prefix[i] + i * num_const_nodes for i in old_sample_ids]
+            indices += torch.LongTensor(prefix_sum).to(node_embedding.device)
+
+        indices = indices.cpu().data.numpy()
+        
+        if num_const_nodes:
+            new_indices = []
+            for g_idx, gnn_g in enumerate(self.sample_buf):
+                cur_local_idx = indices[g_idx] - prefix_sum[g_idx]
+                sample_id = old_sample_ids[g_idx]
+                num_candidates = list_prefix_sum[sample_id] - list_prefix_sum[sample_id - 1] if sample_id else list_prefix_sum[sample_id]
+                if cur_local_idx >= num_candidates:  # this is a choice for global const node
+                    new_indices.append(cur_local_idx - num_candidates + node_embedding.shape[0])
+                else:  # this is a local choice
+                    new_indices.append(list_prefix_sum[sample_id] - num_candidates + cur_local_idx)
+            indices = new_indices
+            update_embedding = torch.cat((node_embedding, const_node_embeds), dim=0)
+        else:
+            update_embedding = node_embedding
+        self.states = self.cell(update_embedding[indices], self.states)
+
+        nodes = []
+        list_choices = []
+        for g_idx, gnn_g in enumerate(self.sample_buf):
+            if indices[g_idx] >= node_embedding.shape[0]:  # this is a global const choice
+                node_idx = indices[g_idx] - node_embedding.shape[0]
+                new_node = const_nodes[node_idx]
+            else:
+                node_idx = node_indices[indices[g_idx]] - old_offsets[old_sample_ids[g_idx]]
+                new_node = gnn_g.pg.node_list[node_idx]
+            nodes.append(new_node)
+            hist_nodes = [] if self.hist_choices is None else self.hist_choices[old_sample_ids[g_idx]]
+            list_choices.append(hist_nodes + [new_node])
+        self.hist_choices = list_choices
+        return nodes, ll_to_add
+    '''
     def get_node(self, node_embedding, fn_node_select,
                  target_indices=None,
                  const_node_embeds=None,
@@ -196,7 +341,9 @@ class GraphOp(AutoregModel):
             list_choices.append(hist_nodes + [new_node])
         self.hist_choices = list_choices
         return nodes
+    '''
 
+    '''
     def _get_fixdim_choices(self, logits, update_embeddings, target_indices=None, masks=None, beam_size=1, num_tries=1):
         if target_indices is not None:
             beam_size = 1
@@ -234,6 +381,49 @@ class GraphOp(AutoregModel):
             list_choices.append(hist_opts + [target_indices[g_idx]])
         self.hist_choices = list_choices
         return target_indices
+    '''
+    
+    def _get_fixdim_choices(self, logits, update_embeddings, target_indices=None, masks=None, beam_size=1, num_tries=1):
+        if target_indices is not None:
+            beam_size = 1
+        if masks is not None:
+            logits = logits * masks + (1.0 - masks) * -10000000
+        stop_probs = torch.exp(F.log_softmax(logits,dim=1))[:,0]
+        ll_all = F.log_softmax(logits, dim=1)
+        stop_flags = (torch.argmax(logits,axis=1)==0)
+        if beam_size == 1:
+            if target_indices is None:
+                if self.rand_flag:
+                    indices = get_rand_one(ll_all)
+                else:
+                    indices = torch.argmax(ll_all, dim=-1)
+            else:
+                indices = torch.LongTensor(target_indices).to(logits.device)
+            ll_to_add = ll_all.gather(1, indices.view(-1, 1)).view(-1)
+            if isinstance(self.ll, np.ndarray):
+                ll_to_add = ll_to_add.cpu().data.numpy()
+            self.ll = self.ll + ll_to_add
+            old_sample_ids = range(len(self.sample_buf))
+        else:
+            if self.rand_flag:
+                step_ll, indices = get_randk(ll_all, num_tries)
+            else:
+                step_ll, indices = torch.topk(ll_all, num_tries, dim=-1)
+            indices, old_sample_ids = self.update_beam_stats(indices, step_ll, beam_size)
+
+        updates = update_embeddings(indices)
+        self.states = self.cell(updates, self.states)
+
+        if target_indices is None:
+            target_indices = indices.cpu().data.numpy()
+        list_choices = []
+        for g_idx in range(len(self.sample_buf)):
+            hist_opts = [] if self.hist_choices is None else self.hist_choices[old_sample_ids[g_idx]]
+            list_choices.append(hist_opts + [target_indices[g_idx]])
+        self.hist_choices = list_choices
+        # pdb.set_trace()
+        return target_indices, ll_to_add, stop_probs, stop_flags
+
 
     def setup_forward(self, ll, states, gnn_graphs, node_embedding, sample_indices, hist_choices, init_edits):
         self.ll = ll

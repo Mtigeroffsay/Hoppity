@@ -1,0 +1,1 @@
+define SLEEP usleep void name_0 ( ) { int count ;  count  =  -  1   ;  fscanf  ( stdin "%d" &  count  ) ; if (  count  <=   fscanf  ( count )  ) {  SLEEP  ( count ) ; } else { } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

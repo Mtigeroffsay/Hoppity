@@ -1,0 +1,1 @@
+void name_1 ( ) { char * data ; CWE665_Improper_Initialization__char_ncat_67_structType myStruct ; char dataBuffer [ 100 ] ;  data  =  dataBadBuffer  ;  data [ 0 ]  =  '\0'  ;   myStruct  .  structFirst   =  data  ;  name_0  ( myStruct ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

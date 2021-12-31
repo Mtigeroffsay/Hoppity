@@ -1,0 +1,1 @@
+short name_0 ( short data ) {  data  =  SHRT_MAX  ; return data ; } void name_1 ( ) { short data ;  data  =  0  ;  data  =   name_0  ( data )  ; { ++  data  ; short  result  =  data  ;  printIntLine  ( result ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

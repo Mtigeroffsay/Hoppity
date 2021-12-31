@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( GLOBAL_CONST_TRUE ) { { FILE  * fileDesc  =  NULL  ;  fileDesc  =   fopen  ( "file.txt" "w+" )  ; if (  fileDesc  ==  NULL  ) {  _close  ( 1 ) ; }  fclose  ( ( int )  fileDesc  ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

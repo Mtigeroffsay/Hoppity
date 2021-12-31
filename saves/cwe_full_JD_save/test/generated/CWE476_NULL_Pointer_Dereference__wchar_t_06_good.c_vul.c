@@ -1,0 +1,1 @@
+void name_0 ( ) { wchar_t * data ; if (  STATIC_CONST_FIVE  ==  5  ) {  data  =  NULL  ; } if (  STATIC_CONST_FIVE  ==  5  ) {  printWcharLine  ( data [ 0 ] ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

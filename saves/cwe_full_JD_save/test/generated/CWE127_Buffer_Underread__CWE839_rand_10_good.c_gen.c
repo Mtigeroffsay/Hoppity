@@ -1,0 +1,1 @@
+void name_0 ( ) { int data ;  data  =  -  1   ; if ( globalTrue ) {  data  =   RAND32  ( )  ; } if ( globalTrue ) { { int  buffer [ 10 ]  =  { 0 }  ; if (  data  <  10  ) {  printIntLine  ( buffer [ data ] ) ; } else { } } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

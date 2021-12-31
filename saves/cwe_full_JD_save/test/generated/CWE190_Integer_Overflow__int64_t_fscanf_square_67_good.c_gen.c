@@ -1,0 +1,1 @@
+void name_2 ( ) { int64_t data ; CWE190_Integer_Overflow__int64_t_fscanf_square_67_structType myStruct ; data = 0L L ;  fscanf  ( myStruct ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

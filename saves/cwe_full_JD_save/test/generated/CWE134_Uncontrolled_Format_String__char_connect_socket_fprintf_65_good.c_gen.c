@@ -1,0 +1,1 @@
+void name_2 ( ) { char * data ;  funcPtr  (  100  *  INVALID_SOCKET  ) ; } int name_0 ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

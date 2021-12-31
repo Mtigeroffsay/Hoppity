@@ -1,0 +1,1 @@
+void name_0 ( ) { int64_t data ; if (  globalFive  ==  5  ) { data = 5L L ; } if (  globalFive  ==  5  ) { ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_1 ( ) { char * data ; char  dataBuffer [ 100 ]  =  COMMAND_ARG2  ;  data  =  dataBuffer  ;  data  =   name_0  ( data )  ; { char  * args [ ]  =  { COMMAND_INT_PATH COMMAND_ARG1 COMMAND_ARG3 NULL }  ;  _spawnv  ( _P_WAIT COMMAND_INT_PATH args ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { int i , j ; char data ;  data  =  ' '  ; for (  i  =  0  ;  i  <  1   i  ++ ) {  fscanf  ( stdin "%c" &  data  ) ; } for (  j  =  0  ;  j  <  1   j  ++ ) { {  data  -- ; char  data  =  data  ;  printHexCharLine  ( result ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

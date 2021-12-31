@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( globalTrue ) { { int  x  = (   rand  ( )  *  3  ) ; switch ( x ) { if (   rand  (  getenv  ( 0 ) :  case 0  )  !=  case 0  ) { break ; } } } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

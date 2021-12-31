@@ -1,0 +1,1 @@
+void name_0 ( long * data ) {  printLongLine  ( *  data  ) ; } void name_1 ( ) { long * data ;  data  =  NULL  ;  name_0  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

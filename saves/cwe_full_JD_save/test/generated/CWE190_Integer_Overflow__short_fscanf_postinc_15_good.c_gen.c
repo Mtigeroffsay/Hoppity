@@ -1,0 +1,1 @@
+void name_0 ( ) { short data ;  data  =  0  ; switch ( 6 ) { case 6 :  fscanf  ( stdin "%hd" &  data  ) ; break ; default : break ; } switch ( 7 ) { case 7 : { short  result  =   data  +  7   ;  printIntLine  ( result ) ; } break ; default : break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

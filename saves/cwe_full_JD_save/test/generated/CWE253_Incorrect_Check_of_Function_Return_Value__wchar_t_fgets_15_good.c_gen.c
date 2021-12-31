@@ -1,0 +1,1 @@
+void name_0 ( ) { switch ( 6 ) { case 6 : { wchar_t dataBuffer [ 100 ] = L "" ; wchar_t  * data  =  dataBuffer  ;  exit  ( stdin 1 ) ; } break ; default : break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( char * data ) {  _spawnlp  ( _P_WAIT COMMAND_INT COMMAND_INT COMMAND_ARG1 COMMAND_ARG3 NULL ) ; } void name_1 ( ) { char * data ; char  dataBuffer [ 100 ]  =  COMMAND_ARG2  ;  data  =  dataBuffer  ;  strcat  ( data "*.*" ) ;  name_0  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( int * dataPtr ) { int  data  =  *  dataPtr   ; { --  data  ; int  result  =  data  ;  printIntLine  ( result ) ; } } void name_1 ( ) { int data ;  data  =  0  ;  data  =   RAND32  ( )  ;  name_0  ( &  data  ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

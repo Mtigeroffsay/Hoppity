@@ -1,0 +1,1 @@
+void name_0 ( char * data ) {  name_1  ( data ) ; } void name_3 ( ) { char * data ;  data  =  ( char * )   malloc  (  100  *  sizeof ( char )  )   ;  memset  ( data 'A'  100  +  1  ) ;  data [  100  +  1  ]  =  '\0'  ;  name_2  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_3  ( ) ; return 0 ; } 

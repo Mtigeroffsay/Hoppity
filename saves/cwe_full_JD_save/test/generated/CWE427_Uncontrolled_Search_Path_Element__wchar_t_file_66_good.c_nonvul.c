@@ -1,0 +1,1 @@
+void name_1 ( ) { wchar_t * data ; wchar_t * dataArray [ 5 ] ; wchar_t dataBuffer [ 250 ] = L "PATH=" ;  data  =  dataBuffer  ;  wcscat  ( data NEW_PATH ) ;  dataArray [ 2 ]  =  data  ;  name_0  ( dataArray ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

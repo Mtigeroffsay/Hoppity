@@ -1,0 +1,1 @@
+void name_0 ( ) { FILE * data ;  data  =  NULL  ;  data  =   fopen  ( "BadSource_fopen.txt" "w+" )  ; { FILE  * dataCopy  =  data  ; FILE  * data  =  dataCopy  ;  data  =   fopen  ( "BadSink_fopen.txt" "w+" )  ; if (  data  !=  NULL  ) {  fclose  ( data ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

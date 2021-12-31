@@ -1,0 +1,1 @@
+void name_0 ( ) { char data ;  data  =  ' '  ; switch ( 6 ) { case 6 :  data  =  CHAR_MAX  ; break ; default : break ; } switch ( 7 ) { case 7 : { char  data * data  =   data  *  data   ;  printHexCharLine  ( result ) ; } break ; default : break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

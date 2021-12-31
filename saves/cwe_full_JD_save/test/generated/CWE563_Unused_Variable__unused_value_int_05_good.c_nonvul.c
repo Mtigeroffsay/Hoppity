@@ -1,0 +1,1 @@
+void name_0 ( ) { int data ; if ( staticTrue ) {  data  =  5  ; } if ( staticTrue ) {  printIntLine  ( data ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

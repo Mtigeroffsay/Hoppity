@@ -1,0 +1,1 @@
+void name_0 ( ) { char data ;  data  =  ' '  ; goto source ; source :  fscanf  ( stdin "%c" &  data  ) ; goto sink ; sink : if (  data  <  CHAR_MAX  ) { ++  data  ; char  data  =  data  ;  printHexCharLine  ( result ) ; } else { } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

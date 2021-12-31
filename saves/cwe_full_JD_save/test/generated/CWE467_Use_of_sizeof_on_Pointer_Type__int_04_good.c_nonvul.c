@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( STATIC_CONST_TRUE ) { { int  * name_1  =  NULL  ; name_1 = ( int * ) malloc ( sizeof ( name_2 ; if (  name_1  ==  NULL  ) {  exit  ( -  1  ) ; }  name_3  =  6  ;  printIntLine  ( name_3 ) ;  free  ( name_1 ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

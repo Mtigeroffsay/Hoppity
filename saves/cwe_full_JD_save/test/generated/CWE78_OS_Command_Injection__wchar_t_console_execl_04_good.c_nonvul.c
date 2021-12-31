@@ -1,0 +1,1 @@
+void name_0 ( ) { wchar_t * data ; wchar_t  dataBuffer [ 100 ]  =  COMMAND_ARG2  ;  data  =  dataBuffer  ; if ( STATIC_CONST_TRUE ) { wcscat ( data , L "*.*" ) ; }  EXECL  ( COMMAND_INT_PATH COMMAND_INT_PATH COMMAND_ARG1 COMMAND_ARG3 NULL ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

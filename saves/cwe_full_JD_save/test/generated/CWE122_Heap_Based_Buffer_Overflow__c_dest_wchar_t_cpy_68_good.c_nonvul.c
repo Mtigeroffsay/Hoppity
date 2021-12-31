@@ -1,0 +1,1 @@
+void name_3 ( ) { wchar_t * data ;  data  =  NULL  ;  data  =  ( wchar_t * )   malloc  (  100  *  sizeof ( wchar_t )  )   ; data [ 0 ] = L '\0' ;  name_1  =  data  ;  name_2  ( ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_3  ( ) ; return 0 ; } 

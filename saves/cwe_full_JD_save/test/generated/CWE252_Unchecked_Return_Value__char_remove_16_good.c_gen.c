@@ -1,0 +1,1 @@
+define REMOVE remove define REMOVE remove void name_0 ( ) { while ( 1 ) { if (   REMOVE  ( "removemegood.txt" )  !=  0  ) {  printIntLine  ( *  ENV_VARIABLE  ) ; } break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

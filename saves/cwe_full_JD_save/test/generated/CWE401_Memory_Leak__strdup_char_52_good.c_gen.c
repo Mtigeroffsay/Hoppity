@@ -1,0 +1,1 @@
+void printLine ( ) { char * data ;  data  =  NULL  ; { char  myString [ ]  =  "myString"  ;  data  =   strdup  ( myString )  ;  name_0  ( data ) ; }  name_1  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  printLine  ( ) ; return 0 ; } 

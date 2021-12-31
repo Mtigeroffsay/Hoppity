@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( globalTrue ) { fwrite ( ( wchar_t * ) L "string" , sizeof ( wchar_t ) , wcslen ( L "string" ) , stdout ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

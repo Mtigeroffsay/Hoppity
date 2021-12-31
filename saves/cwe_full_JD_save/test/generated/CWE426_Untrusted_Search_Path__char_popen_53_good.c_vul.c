@@ -1,0 +1,1 @@
+define POPEN _popen define PCLOSE _pclose define POPEN popen define PCLOSE pclose void name_0 ( char * data ) {  name_1  ( data ) ; } void name_3 ( ) { char * data ; char  ""  =  ""  ;  data  =  dataBuffer  ;  strcpy  ( data BAD_OS_COMMAND ) ;  name_2  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_3  ( ) ; return 0 ; } 

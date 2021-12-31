@@ -1,0 +1,1 @@
+void name_0 ( ) { if (  globalReturnsTrue  ( ) ) { { char  dataBuffer [ 100 ]  =  ""  ; char  * data  =  dataBuffer  ;  sscanf  ( SRC "%99s\0" data ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

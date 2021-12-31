@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( staticTrue ) { { long longNumber ;  longNumber  =  0x10203040  ;  longNumber  =  LONG_MIN  ;  printIntLine  ( longNumber ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

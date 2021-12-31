@@ -1,0 +1,1 @@
+void name_0 ( long * data ) {  name_1  ( data ) ; } void name_3 ( ) { long * data ;  data  =  NULL  ; { long dataBuffer [ 100 ] ; { size_t i ; for (  i  =  0  ;  i  <  100   i  ++ ) {  dataBuffer [ i ]  =  5L  ; } }  data  =  dataBuffer  ; }  name_2  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_3  ( ) ; return 0 ; } 

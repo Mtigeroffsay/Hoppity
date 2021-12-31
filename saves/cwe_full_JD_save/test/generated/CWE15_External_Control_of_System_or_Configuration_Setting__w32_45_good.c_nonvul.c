@@ -1,0 +1,1 @@
+void name_2 ( ) { char  * data  =  name_1  ; if ( !   SetComputerNameA  ( data )  ) {  exit  ( 1 ) ; } } void name_3 ( ) { char * data ; char  dataBuffer [ 100 ]  =  ""  ;  data  =  dataBuffer  ;  strcpy  ( data "hostname" ) ;  name_1  =  data  ;  name_2  ( ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_3  ( ) ; return 0 ; } 

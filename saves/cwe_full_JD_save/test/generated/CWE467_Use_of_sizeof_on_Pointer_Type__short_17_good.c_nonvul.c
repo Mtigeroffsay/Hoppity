@@ -1,0 +1,1 @@
+void name_0 ( ) { int k ; for (  k  =  0  ;  k  <  1   k  ++ ) { { short  * name_1  =  NULL  ; name_1 = ( short * ) malloc ( sizeof ( name_2 ; if (  name_1  ==  NULL  ) {  exit  ( -  1  ) ; }  name_3  =  6  ;  printShortLine  ( name_3 ) ;  free  ( name_1 ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

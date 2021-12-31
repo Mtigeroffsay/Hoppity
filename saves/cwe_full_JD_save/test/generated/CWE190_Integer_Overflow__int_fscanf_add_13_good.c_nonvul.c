@@ -1,0 +1,1 @@
+void name_0 ( ) { int data ;  data  =  0  ; if (  GLOBAL_CONST_FIVE  ==  5  ) {  fscanf  ( stdin "%d" &  data  ) ; } if (  GLOBAL_CONST_FIVE  ==  5  ) { if (  data  <  INT_MAX  ) { int  result  =   data  +  1   ;  printIntLine  ( result ) ; } else { } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

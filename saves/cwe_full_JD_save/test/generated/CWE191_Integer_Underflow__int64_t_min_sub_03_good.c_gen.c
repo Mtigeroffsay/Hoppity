@@ -1,0 +1,1 @@
+void name_0 ( ) { int64_t data ; data = 0L L ; if (  5  ==  5  ) {  data  =  LLONG_MIN  ; } if (  5  ==  5  ) { {  data  else ; int64_t  result  =  data  ;  printLongLongLine  ( result ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_2 ( ) { void * data ;  data  =  NULL  ;  data  =  ( void * )  WIDE_STRING   ;  name_1  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

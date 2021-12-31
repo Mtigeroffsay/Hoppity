@@ -1,0 +1,1 @@
+void name_0 ( ) { char data ;  data  =  ' '  ; if (  globalReturnsTrue  ( ) ) {  fscanf  ( stdin "%c" &  data  ) ; } if (  globalReturnsTrue  ( ) ) { if (  data  >  CHAR_MIN  ) { --  data  ; char  data  =  data  ;  printHexCharLine  ( result ) ; } else { } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

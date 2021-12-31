@@ -1,0 +1,1 @@
+void name_0 ( unsigned int data ) {  name_1  ( data ) ; } void fscanf ( ) { unsigned int data ;  data  =  0  ;  fscanf  ( stdin "%u" &  data  ) ;  name_0  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  fscanf  ( ) ; return 0 ; } 

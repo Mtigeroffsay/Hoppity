@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( staticTrue ) { { char  * keyName  =  "TEST\\TestKey"  ; HKEY hKey ; if (   RegOpenKeyExA  ( HKEY_CURRENT_USER keyName 0 KEY_WRITE &  hKey  )  !=  ERROR_SUCCESS  ) { } else {  RegCloseKey  ( hKey ) ; } } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

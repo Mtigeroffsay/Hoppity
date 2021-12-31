@@ -1,0 +1,1 @@
+void name_0 ( ) { double * data ;  data  =  NULL  ;  data  =  ( double * )   malloc  ( sizeof ( data ) )   ; if (  data  ==  NULL  ) {  exit  ( -  1  ) ; }  *  data   =  1.7E300  ;  printDoubleLine  ( *  data  ) ;  free  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

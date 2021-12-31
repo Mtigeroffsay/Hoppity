@@ -1,0 +1,1 @@
+void name_0 ( ) { if (  globalFive  ==  5  ) { { double doubleNumber ;  errno  =  0  ;  doubleNumber  =  ( double )   sqrt  ( ( double )  -  1   )   ; if (  errno  ==  EDOM  ) {  exit  ( 1 ) ; }  printDoubleLine  ( doubleNumber ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

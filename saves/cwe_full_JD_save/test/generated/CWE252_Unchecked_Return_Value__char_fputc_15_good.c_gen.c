@@ -1,0 +1,1 @@
+void name_0 ( ) { switch ( 6 ) { case 6 : if (   fputc  ( ( int )  'A'  stdout )  ==  EOF  ) {  printIntLine  ( *  stdout  ) ; } break ; default : break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { short data ;  data  =  0  ; while ( 1 ) {  data  =  ( short )   RAND32  ( )   ; break ; } while ( 1 ) { { short  result  =   data  +  1   ;  printIntLine  ( result ) ; } break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

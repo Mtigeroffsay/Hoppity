@@ -1,0 +1,1 @@
+void name_2 ( FILE * data ) { if ( name_1 ) {  fclose  ( data ) ; } } void name_3 ( ) { FILE * data ;  data  =  NULL  ;  data  =   freopen  ( "BadSource_freopen.txt" "w+" stdin )  ;  name_1  =  1  ;  name_2  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_3  ( ) ; return 0 ; } 

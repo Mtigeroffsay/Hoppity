@@ -1,0 +1,1 @@
+int staticReturnsTrue ( ) { return 1 ; } int staticReturnsFalse ( ) { return 0 ; } void name_0 ( ) { long * data ;  data  =  NULL  ;  data  =  ( long * )   calloc  ( 1 sizeof ( long ) )   ; if (  staticReturnsTrue  ( ) ) {  free  ( data ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

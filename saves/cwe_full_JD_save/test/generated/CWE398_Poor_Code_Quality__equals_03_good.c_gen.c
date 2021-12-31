@@ -1,0 +1,1 @@
+void name_0 ( ) { if (  5  ==  5  ) { { int  }  =  'a'  ;  printIntLine  ( intOne ) ;  intOne  =  intFive  ;  printIntLine  ( intOne ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+short name_0 ( short data ) {  data  =   CHAR_MAX  +  5   ; return data ; } void name_1 ( ) { short data ;  data  =  -  1   ;  data  =   name_0  ( data )  ; { char  charData  =  ( char )  data   ;  printHexCharLine  ( charData ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

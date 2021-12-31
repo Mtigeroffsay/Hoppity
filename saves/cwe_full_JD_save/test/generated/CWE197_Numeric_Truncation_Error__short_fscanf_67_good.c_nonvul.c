@@ -1,0 +1,1 @@
+void name_1 ( ) { short data ; CWE197_Numeric_Truncation_Error__short_fscanf_67_structType myStruct ;  data  =  -  1   ;  data  =   CHAR_MAX  +  5   ;   myStruct  .  structFirst   =  data  ;  name_0  ( myStruct ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

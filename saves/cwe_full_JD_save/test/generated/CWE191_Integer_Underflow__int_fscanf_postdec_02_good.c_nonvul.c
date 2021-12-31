@@ -1,0 +1,1 @@
+void name_0 ( ) { int data ;  data  =  0  ; if ( 1 ) {  fscanf  ( stdin "%d" &  data  ) ; } if ( 1 ) { if (  data  >  INT_MIN  ) {  data  -- ; int  result  =  data  ;  printIntLine  ( result ) ; } else { } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_1 ( ) { char * data ; void ( * funcPtr ) ( char * ) = name_0 ;  data  =  NULL  ;  data  =  ( char * )   malloc  (  100  *  sizeof ( char )  )   ;  memset  ( data 'A'  100  +  1  ) ;  data [  100  +  1  ]  =  '\0'  ;  funcPtr  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

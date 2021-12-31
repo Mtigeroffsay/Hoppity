@@ -1,0 +1,1 @@
+char name_0 ( char data ) {  data  =  ( char )   RAND32  ( )   ; return data ; } void name_1 ( ) { char data ;  data  =  ' '  ;  data  =   name_0  ( data )  ; if (  data  >  CHAR_MIN  ) { char  data - 1  =   data  +  1   ;  printHexCharLine  ( result ) ; } else { } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

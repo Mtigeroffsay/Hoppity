@@ -1,0 +1,1 @@
+void name_0 ( ) { int data ; CWE617_Reachable_Assertion__fscanf_34_unionType myUnion ;  data  =  -  1   ;  data  =   ASSERT_VALUE  +  1   ;   myUnion  .  unionFirst   =  data  ; { int  data  =   myUnion  .  unionSecond   ;  assert  (  data  >  ASSERT_VALUE  ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

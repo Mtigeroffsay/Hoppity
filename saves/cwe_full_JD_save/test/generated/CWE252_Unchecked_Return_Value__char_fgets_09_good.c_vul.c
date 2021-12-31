@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( GLOBAL_CONST_TRUE ) { { char  dataBuffer [ 100 ]  =  ""  ; char  * data  =  dataBuffer  ;  fgets  ( data 100 stdin ) ;  printLine  ( data ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

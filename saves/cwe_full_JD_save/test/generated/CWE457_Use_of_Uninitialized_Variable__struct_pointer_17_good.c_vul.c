@@ -1,0 +1,1 @@
+void name_0 ( ) { int i , j ; twoIntsStruct * data ; for (  i  =  0  ;  i  <  1   i  ++ ) { ; } for (  j  =  0  ;  j  <  1   j  ++ ) {  printIntLine  (  data  ->  intOne  ) ;  printIntLine  (  data  ->  intTwo  ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

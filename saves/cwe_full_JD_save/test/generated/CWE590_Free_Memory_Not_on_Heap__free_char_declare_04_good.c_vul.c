@@ -1,0 +1,1 @@
+void name_0 ( ) { char * data ;  data  =  NULL  ; if ( STATIC_CONST_TRUE ) { { char dataBuffer [ 100 ] ;  memset  ( dataBuffer 'A'  100  +  1  ) ;  dataBuffer [  100  +  1  ]  =  '\0'  ;  data  =  dataBuffer  ; } }  printLine  ( data ) ;  free  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

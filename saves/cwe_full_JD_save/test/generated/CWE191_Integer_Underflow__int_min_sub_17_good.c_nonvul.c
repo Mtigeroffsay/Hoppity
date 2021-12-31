@@ -1,0 +1,1 @@
+void name_0 ( ) { int i , k ; int data ;  data  =  0  ; for (  i  =  0  ;  i  <  1   i  ++ ) {  data  =  INT_MIN  ; } for (  k  =  0  ;  k  <  1   k  ++ ) { if (  data  >  INT_MIN  ) { int  result  =   data  +  1   ;  printIntLine  ( result ) ; } else { } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

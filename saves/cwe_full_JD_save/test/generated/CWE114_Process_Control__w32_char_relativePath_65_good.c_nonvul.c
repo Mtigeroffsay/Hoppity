@@ -1,0 +1,1 @@
+void name_1 ( ) { char * data ; void ( * funcPtr ) ( char * ) = name_0 ; char  dataBuffer [ 100 ]  =  ""  ;  data  =  dataBuffer  ;  strcpy  ( data "C:\\Windows\\System32\\winsrv.dll" ) ;  funcPtr  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

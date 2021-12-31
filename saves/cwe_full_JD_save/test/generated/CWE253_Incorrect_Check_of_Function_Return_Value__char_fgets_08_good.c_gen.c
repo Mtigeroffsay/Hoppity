@@ -1,0 +1,1 @@
+int staticReturnsTrue ( ) { return 1 ; } int staticReturnsFalse ( ) { return 0 ; } ; name_0 ( ) { if (  staticReturnsTrue  ( ) ) { { char  dataBuffer [ 100 ]  =  )  ; char  * data  =  NULL  ;  fgets  ( data PASSWORD ) ;  printLine  ( data ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

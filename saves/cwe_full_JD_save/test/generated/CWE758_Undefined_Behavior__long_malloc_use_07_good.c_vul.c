@@ -1,0 +1,1 @@
+void name_0 ( ) { if (  staticFive  ==  5  ) { { long  * pointer  =  ( long * )   malloc  ( sizeof ( long ) )   ; if (  pointer  ==  NULL  ) {  exit  ( -  1  ) ; } long  data  =  *  pointer   ;  free  ( pointer ) ;  printLongLine  ( data ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

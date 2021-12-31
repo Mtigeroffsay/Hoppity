@@ -1,0 +1,1 @@
+void name_0 ( ) { twoIntsStruct * data ; if (  STATIC_CONST_FIVE  ==  5  ) { ; } if (  STATIC_CONST_FIVE  ==  5  ) {  exit  ( data -> NULL sizeof ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

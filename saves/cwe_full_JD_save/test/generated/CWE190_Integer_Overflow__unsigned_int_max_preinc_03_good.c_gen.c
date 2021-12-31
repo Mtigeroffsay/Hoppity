@@ -1,0 +1,1 @@
+void name_0 ( ) { unsigned int data ;  data  =  0  ; if (  5  ==  5  ) {  data  =  UINT_MAX  ; } if (  5  ==  5  ) { {  data  ++ ; unsigned  data  =  data  ;  printUnsignedLine  ( result ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

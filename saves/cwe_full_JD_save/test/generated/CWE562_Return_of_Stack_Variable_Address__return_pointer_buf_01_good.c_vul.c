@@ -1,0 +1,1 @@
+char * helperBad ( ) { char  charString [ ]  =  "helperBad string"  ; char * ptrCharString ;  ptrCharString  =  &  charString [ 1 ]   ; return ptrCharString ; } void name_0 ( ) {  printLine  (  helperBad  ( ) ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+int staticReturnsTrue ( ) { return 1 ; } int staticReturnsFalse ( ) { return 0 ; } void name_0 ( ) { twoIntsStruct data ; ; if (  staticReturnsTrue  ( ) ) {   data  .  intOne   =  0  ;   data  .  intTwo   =  0  ;  printStructLine  ( &  data  ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

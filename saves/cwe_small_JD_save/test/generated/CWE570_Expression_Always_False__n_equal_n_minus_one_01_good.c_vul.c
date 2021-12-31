@@ -1,0 +1,1 @@
+void name_0 ( ) { int  intThirty  =  30  ; if (  intThirty  == (  intThirty  +  1  ) ) { } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

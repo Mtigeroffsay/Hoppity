@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( staticTrue ) { { wchar_t dataBuffer [ 100 ] = L "" ; wchar_t  * data  =  dataBuffer  ; if ( wscanf ( L "%99s\0" , data ) == 0 ) { } } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

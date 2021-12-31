@@ -1,0 +1,1 @@
+void name_0 ( ) { if (  GLOBAL_CONST_FIVE  ==  5  ) {  srand  ( ( unsigned )   time  ( NULL )  ) ; if (   rand  ( )  ==  NUM_CHECK  ) {  UNLINK  ( "important_file.txt" ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

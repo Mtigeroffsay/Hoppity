@@ -1,0 +1,1 @@
+void name_1 ( ) { wchar_t * data ; wchar_t * dataArray [ 5 ] ; wchar_t dataBuffer [ 100 ] ; wmemset ( dataBuffer , L 'A' , 100 - 1 ) ; dataBuffer [ 100 - 1 ] = L '\0' ;  data  =  dataBuffer  ;  dataArray [ 2 ]  =  data  ;  name_0  ( dataArray ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

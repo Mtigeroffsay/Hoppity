@@ -17,6 +17,10 @@ from gtrans.model.gtrans_model import GraphTrans
 from gtrans.common.code_graph import tree_equal
 import gc
 
+import pdb
+
+import pickle
+
 def ast_acc_cnt(pred_asts, true_asts, contents):
     count = 0
     acc = 0
@@ -38,7 +42,6 @@ if __name__ == '__main__':
     torch.manual_seed(cmd_args.seed)
     torch.autograd.set_detect_anomaly(True)
     
-    print(cmd_args.use_colab)
     
     vocab_name = 'vocab_%s.npy' % cmd_args.vocab_type
     print('loading value vocab from', vocab_name)
@@ -71,7 +74,8 @@ if __name__ == '__main__':
     optimizer = optim.Adam(model.parameters(), lr=cmd_args.learning_rate)
     scheduler = StepLR(optimizer, step_size=30, gamma=0.1, last_epoch=-1)
 
-    
+    train_epoch_losses = []
+
     for epoch in range(cmd_args.num_epochs):
         total_loss = 0 
         total_itrs = 0
@@ -82,8 +86,16 @@ if __name__ == '__main__':
                 sample_list = next(train_gen)
                 optimizer.zero_grad()
                 
-                ll, new_asts = model(sample_list, phase='train', pred_gt=True)
+                #pdb.set_trace()
+
+                #ll, new_asts = model(sample_list, phase='train', pred_gt=True)
+                #ll, new_asts, stop_steps_batch, reg_batch_raw = model(sample_list, phase='train', pred_gt=True)
                 
+                ll, new_asts, _, _ = model(sample_list, phase='train', pred_gt=True)
+
+                #pdb.set_trace()
+                           
+
                 loss = -torch.mean(ll)
                 loss.backward()
                 if cmd_args.grad_clip > 0:
@@ -110,10 +122,14 @@ if __name__ == '__main__':
                     pass
                 torch.cuda.empty_cache()
                 gc.collect()
+        epoch_bavg_loss = total_loss/total_itrs
+        train_epoch_losses.append(epoch_bavg_loss)
+        del epoch_bavg_loss
 
 
         if epoch % 1 == 0:
             torch.save(model.state_dict(), os.path.join(cmd_args.save_dir, 'epoch-%d.ckpt' % (epoch)))
+            pickle.dump(train_epoch_losses, open(os.path.join(cmd_args.save_dir, 'train_epoch_losses.pkl'), "wb"))
 
         cur_lr = scheduler.get_lr()
         if cur_lr[-1] > cmd_args.min_lr:

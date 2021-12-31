@@ -1,0 +1,1 @@
+void name_0 ( ) { switch ( 6 ) { case 6 : if ( putwchar ( ( wchar_t ) L 'A' ) == 0 ) { } break ; default : break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

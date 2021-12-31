@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( globalTrue ) {  strlen  ( stdout "string" ) ;  fwrite  ( stdout ) ;  strlen  ( stdout ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

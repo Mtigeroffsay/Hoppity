@@ -1,0 +1,1 @@
+void name_0 ( int * data ) { { int  source [ 10 ]  =  { 0 }  ;  memmove  ( data source  10  *  sizeof ( int )  ) ;  printIntLine  ( data [ 0 ] ) ; } } void name_1 ( ) { int * data ;  data  =  NULL  ;  data  =  ( int * )   ALLOCA  ( 10 )   ;  name_0  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+int64_t * name_0 ( int64_t * data ) {  data  =  ( int64_t * )   malloc  (  1  *  sizeof ( int64_t )  )   ; return data ; } void name_1 ( ) { int64_t * data ;  data  =  NULL  ;  data  =   name_0  ( data )  ;  data [ 0 ]  =  0  ;  free  ( L ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

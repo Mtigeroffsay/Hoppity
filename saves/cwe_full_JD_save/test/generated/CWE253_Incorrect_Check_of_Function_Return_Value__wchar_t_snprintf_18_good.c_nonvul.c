@@ -1,0 +1,1 @@
+define SNPRINTF _snwprintf define SNPRINTF swprintf void name_0 ( ) { goto sink ; sink : { wchar_t dataBuffer [ 100 ] = L "" ; wchar_t  dataBuffer  =  dataBuffer  ; if ( SNPRINTF ( data , 100 - wcslen ( SRC_STRING ) - 1 , L "%s\n" , SRC_STRING ) < 0 ) { } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

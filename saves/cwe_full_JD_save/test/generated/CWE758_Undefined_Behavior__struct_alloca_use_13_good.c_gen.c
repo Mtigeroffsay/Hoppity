@@ -1,0 +1,1 @@
+void name_0 ( ) { if (  GLOBAL_CONST_FIVE  ==  5  ) { { twoIntsStruct  UNKNOWN  =  ( twoIntsStruct * )   ALLOCA  ( sizeof ( twoIntsStruct ) )   ; twoIntsStruct  data  =  *  pointer   ;   data  .  intOne   =  1  ;  printIntLine  ( pointer ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

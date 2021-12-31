@@ -1,0 +1,1 @@
+define SLEEP usleep void name_0 ( ) { int count ;  count  =  -  1   ; if ( GLOBAL_CONST_TRUE ) {  count  =   RAND32  ( )  ; } if ( GLOBAL_CONST_TRUE ) {  SLEEP  ( count ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_3 ( ) { twoIntsStruct * data ;  data  =  NULL  ;  data  =  ( twoIntsStruct * )   malloc  (  100  *  sizeof ( twoIntsStruct )  )   ;  name_1  =  data  ;  name_2  ( ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_3  ( ) ; return 0 ; } 

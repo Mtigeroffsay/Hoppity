@@ -1,0 +1,1 @@
+void name_2 ( ) { long * data ; long * dataArray [ 5 ] ;  data  =  NULL  ;  data  =  ( long * )   malloc  (  50  *  sizeof ( long )  )   ;  free  ( data ) ;  dataArray [ 2 ]  =  data  ;  name_1  ( dataArray ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

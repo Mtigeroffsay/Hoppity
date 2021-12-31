@@ -1,0 +1,1 @@
+void name_0 ( short data ) { {  data  -- ; short  result  =  data  ;  printIntLine  ( result ) ; } } void name_1 ( ) { short data ; void  ( *  funcPtr  ) ( short )  =  name_0  ;  data  =  0  ;  data  =  ( short )   RAND32  ( )   ;  funcPtr  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

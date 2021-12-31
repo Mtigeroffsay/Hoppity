@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( staticTrue ) { { char dest [ DEST_SIZE ] ; int  intFive  =  5  ;  sprintf  ( dest "%s" intFive ) ;  printLine  ( dest ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { { static stdThreadLock  name_1  =  NULL  ;  exit  ( name_1 name_1 ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

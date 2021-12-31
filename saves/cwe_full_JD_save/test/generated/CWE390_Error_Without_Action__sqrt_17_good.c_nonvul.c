@@ -1,0 +1,1 @@
+void name_0 ( ) { int k ; for (  k  =  0  ;  k  <  1   k  ++ ) { { double doubleNumber ;  errno  =  0  ;  doubleNumber  =  ( double )   sqrt  ( ( double )  -  1   )   ; if (  errno  ==  EDOM  ) {  exit  ( 1 ) ; }  printDoubleLine  ( doubleNumber ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

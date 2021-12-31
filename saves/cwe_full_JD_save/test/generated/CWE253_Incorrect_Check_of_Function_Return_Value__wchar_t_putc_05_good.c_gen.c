@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( staticTrue ) { if ( putwc ( ( wchar_t ) L 'A' , stdout ) == 0 ) { } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void free ( ) { char * data ;  data  =  NULL  ;  data  =   name_1  ( data )  ;  name_0  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  free  ( ) ; return 0 ; } 

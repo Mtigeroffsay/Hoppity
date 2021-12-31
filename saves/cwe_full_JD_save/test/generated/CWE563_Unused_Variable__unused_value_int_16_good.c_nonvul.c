@@ -1,0 +1,1 @@
+void name_0 ( ) { int data ; while ( 1 ) {  data  =  5  ; break ; } while ( 1 ) {  printIntLine  ( data ) ; break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

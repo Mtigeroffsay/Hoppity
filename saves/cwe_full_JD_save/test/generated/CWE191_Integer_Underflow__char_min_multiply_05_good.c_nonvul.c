@@ -1,0 +1,1 @@
+void name_0 ( ) { char data ;  data  =  ' '  ; if ( staticTrue ) {  data  =  CHAR_MIN  ; } if ( staticTrue ) { if (  data  <  0  ) { if (  data  > (  CHAR_MIN  *  2  ) ) { char  data * 2  =   data  *  2   ;  printHexCharLine  ( result ) ; } else { } } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

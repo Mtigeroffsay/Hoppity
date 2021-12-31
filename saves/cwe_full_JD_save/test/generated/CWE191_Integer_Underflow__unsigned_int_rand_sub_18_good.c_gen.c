@@ -1,0 +1,1 @@
+void name_0 ( ) { unsigned int data ;  data  =  0  ; goto source ; source :  data  =  ( unsigned int )   RAND32  ( )   ; goto sink ; sink : {  data  else ; unsigned  data - 1  =  data  ;  printUnsignedLine  ( result ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_2 ( ) { int64_t data ; void  ( *  funcPtr  ) ( int64_t )  =  name_1  ; data = 0L L ;  fscanf  ( stdin "%lld" &  data  ) ;  funcPtr  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

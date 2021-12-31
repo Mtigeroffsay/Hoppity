@@ -1,0 +1,1 @@
+void name_0 ( int data ) {  name_1  ( data ) ; } void name_2 ( int data ) {  name_0  ( data ) ; } void name_3 ( int data ) {  name_2  ( data ) ; } void name_3 ( ) { int data ;  data  =  0  ;  name_0  ( stdin "%d" &  data  ) ;  name_3  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

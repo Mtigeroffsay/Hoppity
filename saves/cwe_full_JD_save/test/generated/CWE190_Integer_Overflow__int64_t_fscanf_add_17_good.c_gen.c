@@ -1,0 +1,1 @@
+void name_0 ( ) { int i , j ; int64_t data ; data = 0L L ; for (  j  =  0  ;  j  <  1   j  ++ ) { fscanf ( stdin , "%" SCNd64 , & data ) ; } for (  k  =  0  ;  k  <  1   k  ++ ) { {  data  ++ ; int64_t  result  =  data  ;  printLongLongLine  ( result ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

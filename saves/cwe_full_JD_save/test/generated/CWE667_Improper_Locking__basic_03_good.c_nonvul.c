@@ -1,0 +1,1 @@
+void name_0 ( ) { if (  5  ==  5  ) { { static stdThreadLock  name_1  =  NULL  ; if ( !   stdThreadLockCreate  ( &  name_1  )  ) {  exit  ( 1 ) ; }  stdThreadLockAcquire  ( name_1 ) ;  stdThreadLockRelease  ( name_1 ) ;  stdThreadLockDestroy  ( name_1 ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

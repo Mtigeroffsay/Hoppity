@@ -1,0 +1,1 @@
+void name_0 ( ) { goto sink ; sink : { HANDLE  hMutex  =  NULL  ;  hMutex  =   CreateMutexW  ( NULL FALSE NULL )  ; if (  hMutex  ==  NULL  ) {  _close  ( 1 ) ; }  CloseHandle  ( ( int )  hMutex  ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

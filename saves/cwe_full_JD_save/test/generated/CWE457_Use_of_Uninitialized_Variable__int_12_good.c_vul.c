@@ -1,0 +1,1 @@
+void name_0 ( ) { int data ; if (  globalReturnsTrueOrFalse  ( ) ) { ; } else {  data  =  5  ; } if (  globalReturnsTrueOrFalse  ( ) ) {  printIntLine  ( data ) ; } else {  data  =  5  ;  printIntLine  ( data ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_2 ( ) { int * data ;  data  =  NULL  ;  data  =  ( int * )   malloc  (  100  *  sizeof ( int )  )   ;  free  ( data ) ;  name_0  =  1  ;  name_1  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

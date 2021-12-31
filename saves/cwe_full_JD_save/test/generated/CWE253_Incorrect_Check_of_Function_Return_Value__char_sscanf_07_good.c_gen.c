@@ -1,0 +1,1 @@
+void name_0 ( ) { if (  staticFive  ==  5  ) { { char  dataBuffer [ 100 ]  =  ""  ; char  * data  =  dataBuffer  ; if (   sscanf  ( SRC_STRING "%99s\0" data )  ==  EOF  ) {  printIntLine  ( *  SRC_STRING  ) ; } } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

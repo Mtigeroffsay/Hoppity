@@ -1,0 +1,1 @@
+void name_0 ( ) { unsigned int data ;  data  =  0  ; if (  globalFive  ==  5  ) {  fscanf  ( stdin "%u" &  data  ) ; } if (  globalFive  ==  5  ) { if (  data  >  0  ) { unsigned  data * 2  =   data  *  2   ;  printUnsignedLine  ( result ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

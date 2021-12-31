@@ -1,0 +1,1 @@
+define PUTENV putenv void name_0 ( wchar_t * data ) {  PUTENV  ( data ) ; } void name_1 ( ) { wchar_t * data ; wchar_t dataBuffer [ 250 ] = L "PATH=" ;  data  =  dataBuffer  ;  wcscat  ( data NEW_PATH ) ;  name_0  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( staticTrue ) { { char  * keyName  =  "TEST\\TestKey"  ; HUSKEY  hKey  =  HKEY_CURRENT_USER  ; if (   SHRegCreateUSKeyA  ( keyName KEY_ALL_ACCESS NULL &  hKey  SHREGSET_HKCU )  !=  ERROR_SUCCESS  ) { } else {  SHRegCloseUSKey  ( hKey ) ; } } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

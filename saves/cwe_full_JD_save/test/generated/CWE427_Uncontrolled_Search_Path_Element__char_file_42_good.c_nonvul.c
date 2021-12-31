@@ -1,0 +1,1 @@
+char * name_0 ( char * data ) {  strcat  ( data NEW_PATH ) ; return data ; } void name_1 ( ) { char * data ; char  dataBuffer [ 250 ]  =  "PATH="  ;  data  =  dataBuffer  ;  data  =   name_0  ( data )  ;  PUTENV  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

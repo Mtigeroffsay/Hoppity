@@ -1,0 +1,1 @@
+define SYSTEM system define SYSTEM system void name_0 ( ) { int h ; char * data ; char  FULL_COMMAND  =  FULL_COMMAND  ;  data  =  data_buf  ; for (  h  =  0  ;  h  <  1   h  ++ ) {  strcat  ( data "*.*" ) ; } if (   SYSTEM  ( data )  !=  0  ) {  exit  ( 1 ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

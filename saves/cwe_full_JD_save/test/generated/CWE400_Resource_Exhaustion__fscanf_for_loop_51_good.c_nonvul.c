@@ -1,0 +1,1 @@
+void name_0 ( int count ) { { size_t  i  =  0  ; if (   count  >  0   &&   count  <=  20   ) { for (  i  =  0  ;  i  <  ( size_t )  count    i  ++ ) { } } } } void name_1 ( ) { int count ;  count  =  -  1   ;  fscanf  ( stdin "%d" &  count  ) ;  name_0  ( count ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

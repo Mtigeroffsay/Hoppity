@@ -1,0 +1,1 @@
+void name_0 ( ) { int64_t * data ; while ( 1 ) {  data  =  NULL  ; break ; } while ( 1 ) {  printLongLongLine  ( *  data  ) ; break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

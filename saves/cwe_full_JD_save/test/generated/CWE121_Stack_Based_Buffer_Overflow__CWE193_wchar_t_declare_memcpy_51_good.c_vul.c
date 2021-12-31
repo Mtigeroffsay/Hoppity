@@ -1,0 +1,1 @@
+void name_1 ( ) { wchar_t * data ; wchar_t dataBadBuffer [ 10 ] ; wchar_t dataGoodBuffer [ 10 + 1 ] ;  data  =  dataBadBuffer  ; data [ 0 ] = L '\0' ;  name_0  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

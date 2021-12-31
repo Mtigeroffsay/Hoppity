@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( globalTrue ) { { int  x  = (   rand  ( )  *  3  ) ; int  y  =  0  ; if (  x  ==  0  ) {  y  =  1  ; } if ( y ) {  printIntLine  ( *  y  ) ; } } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

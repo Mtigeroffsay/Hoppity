@@ -1,0 +1,1 @@
+void name_0 ( ) { int64_t data ; data = 0L L ; goto source ; source :  data  =  LLONG_MAX  ; goto sink ; sink : { int64_t  result  =   data  +  1   ;  printLongLongLine  ( result ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

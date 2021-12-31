@@ -1,0 +1,1 @@
+void name_0 ( ) { int * data ;  data  =  NULL  ;  data  =  ( int * )   realloc  ( data  1  *  sizeof ( int )  )   ;  data [ 0 ]  =  5  ;  free  ( data [ 0 ] ) ;  printIntLine  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

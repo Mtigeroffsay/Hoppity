@@ -1,0 +1,1 @@
+void name_0 ( int64_t data ) { { int64_t  result  =   data  *  data   ;  printLongLongLine  ( result ) ; } } void name_2 ( ) { int64_t data ; data = 0L L ;  data  =  ( int64_t )   RAND64  ( )   ;  name_1  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

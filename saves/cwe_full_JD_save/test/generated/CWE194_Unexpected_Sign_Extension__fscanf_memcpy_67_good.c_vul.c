@@ -1,0 +1,1 @@
+void name_1 ( ) { short data ; CWE194_Unexpected_Sign_Extension__fscanf_memcpy_67_structType myStruct ;  data  =  0  ;  fscanf  ( stdin "%hd" &  data  ) ;   myStruct  .  structFirst   =  data  ;  name_0  ( myStruct ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

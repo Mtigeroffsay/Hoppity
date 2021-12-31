@@ -1,0 +1,1 @@
+void name_0 ( ) { char data ;  data  =  ' '  ; if (  globalFive  ==  5  ) {  data  =  ( char )   RAND32  ( )   ; } if (  globalFive  ==  5  ) { if (  data  <  0  ) { char  data * 2  =   data  *  2   ;  printHexCharLine  ( result ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

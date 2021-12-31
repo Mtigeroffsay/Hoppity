@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( GLOBAL_CONST_TRUE ) { { int  0  =  0  ;  printIntLine  ( intSum ) ;  intOne  +  intTwo  ;  printIntLine  ( intSum ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

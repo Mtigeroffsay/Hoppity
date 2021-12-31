@@ -1,0 +1,1 @@
+void name_0 ( ) { switch ( 6 ) { case 6 : { char  dataBuffer [ 100 ]  =  ""  ; char  * data  =  dataBuffer  ; if (   fgets  ( data 100 stdin )  ==  NULL  ) {  exit  ( 1 ) ; }  printLine  ( data ) ; } break ; default : break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

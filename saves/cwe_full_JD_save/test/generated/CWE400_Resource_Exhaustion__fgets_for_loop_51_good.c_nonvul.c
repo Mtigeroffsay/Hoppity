@@ -1,0 +1,1 @@
+void name_2 ( ) { int count ;  count  =  -  1   ; { char  inputBuffer [ CHAR_ARRAY_SIZE ]  =  ""  ; if (   fgets  ( inputBuffer CHAR_ARRAY_SIZE stdin )  !=  NULL  ) {  count  =   atoi  ( inputBuffer )  ; } else { } }  name_1  ( count ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

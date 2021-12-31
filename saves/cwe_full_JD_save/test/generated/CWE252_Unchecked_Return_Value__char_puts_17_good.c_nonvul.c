@@ -1,0 +1,1 @@
+define PUTS puts define PUTS puts void name_0 ( ) { int k ; for (  k  =  0  ;  k  <  1   k  ++ ) { if (   PUTS  ( "string" )  ==  EOF  ) { } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( int * data ) {  name_1  ( data ) ; } void name_2 ( ) { int * data ;  data  =  NULL  ;  data  =  ( int * )   realloc  ( data  100  *  sizeof ( int )  )   ;  data [ 0 ]  =  5  ;  name_0  ( data [ 0 ] ) ;  name_3  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { int data ;  data  =  0  ; while ( 1 ) {  fscanf  ( stdin "%d" &  data  ) ; break ; } while ( 1 ) { { int  result  =   data  +  1   ;  printIntLine  ( result ) ; } break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

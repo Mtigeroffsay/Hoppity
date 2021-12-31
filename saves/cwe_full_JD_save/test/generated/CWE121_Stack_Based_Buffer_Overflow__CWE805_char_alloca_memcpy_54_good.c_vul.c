@@ -1,0 +1,1 @@
+void name_1 ( ) { char * data ; char  * dataBadBuffer  =  ( char * )   ALLOCA  (  50  *  sizeof ( char )  )   ; char  * dataGoodBuffer  =  ( char * )   ALLOCA  (  100  *  sizeof ( char )  )   ;  data  =  dataBadBuffer  ;  data [ 0 ]  =  '\0'  ;  name_0  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

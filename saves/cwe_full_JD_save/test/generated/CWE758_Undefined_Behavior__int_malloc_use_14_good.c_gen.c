@@ -1,0 +1,1 @@
+void name_0 ( ) { if (  globalFive  ==  5  ) { { int  UNKNOWN  =  ( int * )   malloc  ( sizeof ( int ) )   ; int  data  =  *  pointer   ;  exit  ( pointer ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

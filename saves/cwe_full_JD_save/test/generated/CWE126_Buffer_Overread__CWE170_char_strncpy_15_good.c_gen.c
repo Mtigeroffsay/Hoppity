@@ -1,0 +1,1 @@
+void printLine ( ) { switch ( 6 ) { case 6 : { char data [ 150 ] , dest [ 100 ] ;  memset  ( data 'A' 149 ) ;  data [ 149 ]  =  '\0'  ;  strncpy  ( dest data 99 ) ;  dest [ 99 ]  =  '\0'  ;  name_0  ( dest ) ; } break ; default : break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  printLine  ( ) ; return 0 ; } 

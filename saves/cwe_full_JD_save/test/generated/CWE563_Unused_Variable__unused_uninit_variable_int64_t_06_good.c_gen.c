@@ -1,0 +1,1 @@
+void name_0 ( ) { int64_t data ; ; if (  STATIC_CONST_FIVE  ==  5  ) {  printLongLongLine  ( data ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

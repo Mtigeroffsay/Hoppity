@@ -1,0 +1,1 @@
+void name_0 ( ) { if (  globalReturnsTrueOrFalse  ( ) ) { { int x ;  x  = (   rand  ( )  *  3  ) ; if (  x  ==  0  ) { } else { } } } else { { int x ;  x  = (   rand  ( )  *  3  ) ; if (  x  ==  0  ) {  UNLINK  ( "important_file.txt" ) ; } else { } } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

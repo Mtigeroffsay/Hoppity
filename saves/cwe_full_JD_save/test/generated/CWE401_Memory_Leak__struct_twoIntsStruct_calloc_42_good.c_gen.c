@@ -1,0 +1,1 @@
+struct _twoIntsStruct * name_0 ( struct _twoIntsStruct * data ) {  printStructLine  ( data ) ; } void name_0 ( ) { struct _twoIntsStruct * data ;  data  =  NULL  ;  data  =   name_0  ( data )  ;  free  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

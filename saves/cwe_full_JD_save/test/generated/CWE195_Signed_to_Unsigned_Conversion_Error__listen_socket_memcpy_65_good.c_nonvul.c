@@ -1,0 +1,1 @@
+void name_1 ( ) { int data ; void  ( *  funcPtr  ) ( int )  =  name_0  ;  data  =  -  1   ;  data  =   100  +  1   ;  funcPtr  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { if (  staticFive  ==  5  ) { { HANDLE  hMutex  =  NULL  ;  hMutex  =   CreateMutexW  ( NULL FALSE NULL )  ; if (  hMutex  ==  INVALID_HANDLE_VALUE  ) {  exit  ( 1 ) ; }  CloseHandle  ( hMutex ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { char data ;  data  =  ' '  ; while ( 1 ) {  data  =  CHAR_MIN  ; break ; } while ( 1 ) { if (  data  >  CHAR_MIN  ) {  data  -- ; char  data  =  data  ;  printHexCharLine  ( result ) ; } else { } break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

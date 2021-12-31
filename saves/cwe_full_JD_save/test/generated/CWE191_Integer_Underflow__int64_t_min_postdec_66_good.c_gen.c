@@ -1,0 +1,1 @@
+void name_1 ( ) { int64_t data ; int64_t dataArray [ 5 ] ; data = 0L L ;  data  =  LLONG_MIN  ;  dataArray [ 2 ]  =  data  ;  name_0  ( dataArray ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

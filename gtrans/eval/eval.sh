@@ -1,7 +1,7 @@
-data_name=[NAME]
-cooked_root=[DATA_DIR]
-save_dir=[MODEL_DUMP_DIR]
-target_model=[PATH_TO_MODEL_TO_EVALUATE]
+data_name=cwe_full_JD
+cooked_root=./gtrans/dataset_processed/cwe_full_JD_cooked
+save_dir=./saves/cwe_full_JD_save
+target_model=./saves/cwe_fll_JD_save/epoch-115.ckpt
 
 export CUDA_VISIBLE_DEVICES=0
 

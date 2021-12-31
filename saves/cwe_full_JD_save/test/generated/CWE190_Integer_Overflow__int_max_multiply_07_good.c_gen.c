@@ -1,0 +1,1 @@
+void name_0 ( ) { int data ;  data  =  0  ; if (  staticFive  ==  5  ) {  data  =  INT_MAX  ; } if (  staticFive  ==  5  ) { if (  data  >  0  ) { int  result  =   data  *  2   ;  printIntLine  ( result ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

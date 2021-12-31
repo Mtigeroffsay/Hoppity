@@ -1,0 +1,1 @@
+void name_0 ( twoIntsStruct * data ) { ; } void name_4 ( ) { twoIntsStruct * data ;  data  =  NULL  ;  name_3  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_4  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { while ( 1 ) { { char path [ MAX_PATH ] ; DWORD length ;  length  =   GetCurrentDirectoryA  ( MAX_PATH path )  ; if (   length  ==  0   &&   length  >=  MAX_PATH   ) {  exit  ( 1 ) ; }  PathAppendA  ( path ) ; } break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

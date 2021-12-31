@@ -1,0 +1,1 @@
+void name_0 ( ) { wchar_t * data ; while ( 1 ) { ; break ; } while ( 1 ) {  printWLine  ( data ) ; break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

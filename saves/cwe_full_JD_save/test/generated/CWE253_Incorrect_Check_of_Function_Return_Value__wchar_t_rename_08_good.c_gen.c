@@ -1,0 +1,1 @@
+int staticReturnsFalse ( ) { return 0 ; } void name_4 ( ) { if (  staticReturnsTrue  ( ) ) { if (   RENAME  ( OLD_GOOD_FILE_NAME NEW_GOOD_FILE_NAME )  !=  0  ) {  printIntLine  ( *  OLD_GOOD_FILE_NAME  ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_4  ( ) ; return 0 ; } 

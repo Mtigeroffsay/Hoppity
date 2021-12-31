@@ -1,0 +1,1 @@
+void name_0 ( ) { float data ;  data  =  0.0F  ; if ( 1 ) {  data  =  0.0F  ; } if ( 1 ) { { int  result  =  ( int ) (  100.0  *  data  )  ;  printIntLine  ( result ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

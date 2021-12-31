@@ -1,0 +1,1 @@
+void name_0 ( ) { { wchar_t * data ; wchar_t  * * pointer  =  ( wchar_t * * )   malloc  ( sizeof ( wchar_t * ) )   ; { wchar_t data ; ; (  * pointer  =  0  ;  * pointer  <  1   data  if ) { UNKNOWN  free  ( pointer  100  +  0  ) ;  printWLine  ( pointer ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

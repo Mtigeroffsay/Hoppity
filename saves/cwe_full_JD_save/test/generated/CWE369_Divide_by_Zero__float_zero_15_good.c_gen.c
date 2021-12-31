@@ -1,0 +1,1 @@
+void name_0 ( ) { float data ;  data  =  0.0F  ; switch ( 6 ) { case 6 :  data  =  0.0F  ; break ; default : break ; } switch ( 7 ) { case 7 : { int  result  =   data  *  data   ;  printIntLine  ( result ) ; } break ; default : break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( globalTrue ) { { short  * name_1  =  NULL  ; { WSADATA wsaData ; int  wsaDataInit  =  0  ; int recvResult ; SOCKET  wsaDataInit  =  UNKNOWN  name_3  =   atoi  ( name_2 1 )  ;  free  ( name_1 ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

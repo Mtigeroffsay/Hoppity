@@ -1,0 +1,1 @@
+void name_2 ( ) { char * data ; char  dataBuffer [ 100 ]  =  ""  ;  data  =  dataBuffer  ;  data  =   name_1  ( data )  ;  printf  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

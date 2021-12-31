@@ -1,0 +1,1 @@
+void name_5 ( ) { int64_t data ; data = 0L L ;  data  =  ( int64_t )   RAND64  ( )   ;  name_1  =  1  ;  name_4  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_5  ( ) ; return 0 ; } 

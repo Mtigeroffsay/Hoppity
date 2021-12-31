@@ -1,0 +1,1 @@
+void name_0 ( ) { wchar_t data ; data = L 'W' ; if ( GLOBAL_CONST_TRUE ) { ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

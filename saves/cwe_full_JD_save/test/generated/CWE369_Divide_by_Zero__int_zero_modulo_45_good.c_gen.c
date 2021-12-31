@@ -1,0 +1,1 @@
+void name_3 ( ) { int  data  =  name_0  ;  printIntLine  ( data ) ; } void name_4 ( ) { int data ;  data  =  -  1   ;  data  =  0  ;  name_0  =  data  ;  name_3  ( ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_4  ( ) ; return 0 ; } 

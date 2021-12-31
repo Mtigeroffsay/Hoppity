@@ -1,0 +1,1 @@
+void name_0 ( ) { char * data ; char  dataBuffer [ 250 ]  =  "PATH="  ;  data  =  dataBuffer  ; if (  staticFive  ==  5  ) {  strcat  ( data NEW_PATH ) ; }  PUTENV  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

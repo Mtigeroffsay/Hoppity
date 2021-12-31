@@ -1,0 +1,1 @@
+void name_0 ( ) { FILE * data ;  data  =  NULL  ; data = _wfopen ( L "file.txt" , L "w+" ) ; if (  globalReturnsTrueOrFalse  ( ) ) {  fclose  ( data data ) ; } else { if (  data  !=  NULL  ) {  fclose  ( data ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

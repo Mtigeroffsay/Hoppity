@@ -1,0 +1,1 @@
+void name_0 ( ) { goto sink ; sink : {   structCharInt  .  charFirst   =  1  ;  printIntLine  ( stdin "%d" &  structCharInt  ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

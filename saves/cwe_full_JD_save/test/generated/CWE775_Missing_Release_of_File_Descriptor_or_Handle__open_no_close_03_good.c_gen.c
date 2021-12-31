@@ -1,0 +1,1 @@
+define OPEN open define CLOSE close void name_0 ( ) { int data ;  data  =  -  1   ;  data  =   OPEN  ( "BadSource_open.txt"  O_RDWR  &&  O_CREAT   S_IREAD  &&  S_IWRITE  )  ; if (  5  ==  5  ) { if (  data  !=  -  1   ) {  _close  ( ( int )  data  ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

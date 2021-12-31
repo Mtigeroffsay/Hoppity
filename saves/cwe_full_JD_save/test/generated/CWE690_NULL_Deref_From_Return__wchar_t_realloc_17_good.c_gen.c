@@ -1,0 +1,1 @@
+void name_0 ( ) { int j ; wchar_t * data ;  data  =  NULL  ;  data  =  ( wchar_t * )   realloc  ( data  20  *  sizeof ( wchar_t )  )   ; for (  j  =  0  ;  j  <  1   j  ++ ) {  printWLine  ( data ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { if (  GLOBAL_CONST_FIVE  ==  5  ) { { wchar_t dataBuffer [ 100 ] = L "" ; wchar_t  * data  =  dataBuffer  ; wscanf ( L "%99s\0" , data ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

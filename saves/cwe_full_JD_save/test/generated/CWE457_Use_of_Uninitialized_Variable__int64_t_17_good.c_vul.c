@@ -1,0 +1,1 @@
+void name_0 ( ) { int i , j ; int64_t data ; for (  i  =  0  ;  i  <  1   i  ++ ) { ; } for (  j  =  0  ;  j  <  1   j  ++ ) {  printLongLongLine  ( data ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

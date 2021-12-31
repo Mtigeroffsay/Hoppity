@@ -21,7 +21,7 @@ opts = argparse.ArgumentParser(description='gpu option', allow_abbrev=False)
 opts.add_argument('-gpu', type=int, default=-1, help='-1: cpu; 0 - ?: specific gpu index')
 
 args, _ = opts.parse_known_args()
-args.gpu = 0    # +++++
+
 if torch.cuda.is_available() and args.gpu >= 0:
     DEVICE = torch.device('cuda:' + str(args.gpu))
     print('use gpu indexed: %d' % args.gpu)

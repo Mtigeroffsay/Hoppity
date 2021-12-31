@@ -1,0 +1,1 @@
+int64_t name_0 ( int64_t data ) {  data  =  LLONG_MAX  ; return data ; } void name_1 ( ) { int64_t data ; data = 0L L ;  data  =   name_0  ( data )  ; { int64_t  result  =   data  *  data   ;  printLongLongLine  ( result ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

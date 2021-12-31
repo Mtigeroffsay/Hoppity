@@ -1,0 +1,1 @@
+define EXECL _wexecl define EXECL execl void name_0 ( wchar_t * data ) {  name_1  ( data ) ; } void name_2 ( ) { wchar_t * data ; wchar_t  COMMAND_ARG2  =  COMMAND_ARG2  ;  data  =  dataBuffer  ; wcscat ( data , L "*.*" ) ;  name_0  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

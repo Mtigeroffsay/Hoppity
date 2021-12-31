@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( globalTrue ) { { HDESK hDesk ; wchar_t * desktopName = L "DesktopExample" ;  hDesk  =   CreateDesktopW  ( desktopName NULL NULL 0 GENERIC_READ NULL )  ; if (  hDesk  ==  NULL  ) { } else {  CloseDesktop  ( hDesk ) ; } } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

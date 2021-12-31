@@ -15,6 +15,9 @@ from gtrans.common.pytorch_util import MLP
 from gtrans.model.graph_ops import get_graph_op, GraphOp
 from gtrans.common.consts import OP_ADD_NODE, OP_NONE, OP_DEL_NODE, OP_REPLACE_TYPE, OP_REPLACE_VAL, CONTENT_NODE_TYPE, t_float, DEVICE
 
+#####
+import pdb
+
 def printTree(node):
     if node.is_leaf and type(node.value)==str:
         print(node.value,end=' ')
@@ -78,7 +81,8 @@ class GraphTrans(GraphOp):
         for op in self.ops:
             if op is not None:
                 op.rand_flag = self.rand_flag
-
+    
+    '''
     def choose_op(self, targets=None, masks=None, beam_size=1):
         target_indices = None
         if targets is not None:
@@ -95,6 +99,27 @@ class GraphTrans(GraphOp):
         if target_indices is None:
             target_indices = [t[-1] for t in self.hist_choices]
         return np.array(target_indices)
+    '''
+    
+    def choose_op(self, targets=None, masks=None, beam_size=1):
+        target_indices = None
+        if targets is not None:
+            target_indices = [self.op_names.index(t) for t in targets]
+        logits = self.op_pred(self.states)
+
+        num_tries = min(beam_size, len(self.op_names))
+
+        # pdb.set_trace()
+        _, ll_to_add, stop_probs, stop_flags = self._get_fixdim_choices(logits,
+                                 self.op_embedding,
+                                 target_indices=target_indices,
+                                 masks=masks,
+                                 beam_size=beam_size,
+                                 num_tries=num_tries)
+        if target_indices is None:
+            target_indices = [t[-1] for t in self.hist_choices]
+        # pdb.set_trace()
+        return np.array(target_indices), ll_to_add, stop_probs, stop_flags
 
     def update_graph_repre(self, gnn_graphs):
         graph_embed, (_, node_embedding) = self.gnn(gnn_graphs)
@@ -181,7 +206,9 @@ class GraphTrans(GraphOp):
         self.sample_buf = None  # the existing sample buf is now obsolete
         return new_asts, new_refs, contents
 
-    def forward(self, sample_list, phase, beam_size=1, pred_gt=False, op_given=False, loc_given=False):
+    #### reg_term switches whether to calculate regularization term
+    '''
+    def forward(self, sample_list, phase, beam_size=1, pred_gt=False, op_given=False, loc_given=False, reg_term=False):
         """
         Args:
             sample_list: list of samples
@@ -190,6 +217,9 @@ class GraphTrans(GraphOp):
             pred_gt: output groundtruth, instead of making prediction
                     when training, this must be true
         """
+        
+        pdb.set_trace()
+        
         self.sample_indices = [[i] for i in range(len(sample_list))]
         if pred_gt:
             assert beam_size == 1
@@ -203,11 +233,20 @@ class GraphTrans(GraphOp):
         batch_size = len(sample_list)
         self.sample_buf = [s.buggy_gnn_graph for s in sample_list]
         
+        ### add edit_len list
+        edit_len_list = np.zeros(batch_size)
+        
+        #####
+        pdb.set_trace()
 
         for step in range(self.max_modify_steps):
             #printTree(self.sample_buf[0].pg.ast.root_node)
             self.hist_choices = None
             self.node_embedding = self.update_graph_repre(self.sample_buf)
+
+            #### add a list to get statistics
+            #### 1 for normal operators, 0 for OP_NONE.
+            self.cur_edit_stop_flag = np.zeros(batch_size)
 
             self.cur_edits = [None] * len(self.sample_buf)
             if not phase == "test" or pred_gt or loc_given:
@@ -216,15 +255,20 @@ class GraphTrans(GraphOp):
                     if step < len(s.g_edits):
                         for j in self.sample_indices[i]:
                             self.cur_edits[j] = s.g_edits[step]
-            
+            #### self.cur_edits contains the groundtruth edits for the batch in currect step
+            pdb.set_trace()
+
             # predict location
             target_indices = None
             if pred_gt or loc_given:
                 target_indices = []
                 for i, g in enumerate(self.sample_buf):
+                    
+                    pdb.set_trace()
 
                     e = self.cur_edits[i]
 
+                    #### exec if e==None
                     if not e:
                         target_indices.append(g.pg.ast.root_node.index)
                         continue
@@ -244,12 +288,15 @@ class GraphTrans(GraphOp):
                             break
                         target_indices.append(e.node_index)
             
-            
+            pdb.set_trace() 
+            print('to get_node') 
             self.get_node(self.node_embedding,
                           fn_node_select=lambda bid, node: node.node_type != CONTENT_NODE_TYPE,
                           target_indices=target_indices,
                           beam_size=beam_size)
             
+            pdb.set_trace()
+
             if pred_gt or op_given:
                 target_op = [t.op if t is not None else OP_NONE for t in self.cur_edits]
             else:
@@ -269,6 +316,10 @@ class GraphTrans(GraphOp):
             new_refs = [s.pg.refs for s in self.sample_buf]
 
             num_stops = len(np.where(op_indices == self.op_names.index(OP_NONE))[0])
+            
+            ##########
+            # print(op_indices)
+    
             if num_stops == len(self.sample_buf):  # no one needs further edits
                 break
 
@@ -333,7 +384,7 @@ class GraphTrans(GraphOp):
             # build new graph representation, after the current edit to the graph
             buggy_code_graphs = [CodeGraph(ast, new_ref, c) for (ast, new_ref, c) in zip(new_asts, new_refs, contents)]
             self.sample_buf = [get_gnn_graph(cg, self.gnn_type) for cg in buggy_code_graphs]
-
+        
         agg_asts = []
         tot_asts = 0
         for l in self.sample_indices:
@@ -343,3 +394,201 @@ class GraphTrans(GraphOp):
         assert tot_asts == len(new_asts)
 
         return self.ll, agg_asts
+    '''
+
+    def forward(self, sample_list, phase, beam_size=1, pred_gt=False, op_given=False, loc_given=False):
+        """
+        Args:
+            sample_list: list of samples
+            phase: 'train', 'val', 'test', etc
+            beam_size: size of beam search
+            pred_gt: output groundtruth, instead of making prediction
+                    when training, this must be true
+        """
+        self.sample_indices = [[i] for i in range(len(sample_list))]
+        if pred_gt:
+            assert beam_size == 1
+        if phase == 'train':
+            assert pred_gt
+            self.train()
+        else:
+            self.eval()
+        self.states = None
+        self.ll = 0
+        batch_size = len(sample_list)
+        self.sample_buf = [s.buggy_gnn_graph for s in sample_list]
+
+        #### (conditional) stop_probs of each sample in the batch on each step.
+        stop_probs_batch = []
+        stop_steps_batch = [-1]*batch_size
+
+        reg_batch_raw = torch.zeros(batch_size)
+        reg_flag = [False]*batch_size
+        stop_cumu_probs = torch.ones(batch_size)
+
+        for step in range(self.max_modify_steps):
+            # pdb.set_trace()
+            #print(f'step: %d' %step)
+            #printTree(self.sample_buf[0].pg.ast.root_node)
+            self.hist_choices = None
+            self.node_embedding = self.update_graph_repre(self.sample_buf)
+
+            self.cur_edits = [None] * len(self.sample_buf)
+            if not phase == "test" or pred_gt or loc_given:
+                for i in range(batch_size):
+                    s = sample_list[i]
+                    if step < len(s.g_edits):
+                        for j in self.sample_indices[i]:
+                            self.cur_edits[j] = s.g_edits[step]
+
+            # predict location
+            target_indices = None
+            if pred_gt or loc_given:
+                target_indices = []
+                for i, g in enumerate(self.sample_buf):
+
+                    e = self.cur_edits[i]
+
+                    if not e:
+                        target_indices.append(g.pg.ast.root_node.index)
+                        continue
+
+                    if e.op == OP_ADD_NODE:
+                        if not hasattr(e, 'parent_id'):
+                            target_indices = None
+                            break
+
+                        target_indices.append(e.parent_id)
+
+                    elif e.op == OP_NONE:
+                        target_indices.append(g.pg.ast.root_node.index)
+                    else:
+                        if not hasattr(e, 'node_index'):
+                            target_indices = None
+                            break
+                        target_indices.append(e.node_index)
+
+            ######## ll_loc_batch contains log probs of location selection for each sample in the batch at current step
+            _, ll_loc_batch_cur =self.get_node(self.node_embedding,
+                          fn_node_select=lambda bid, node: node.node_type != CONTENT_NODE_TYPE,
+                          target_indices=target_indices,
+                          beam_size=beam_size)
+
+            #print('ll_loc_batch_cur:')
+            #print(ll_loc_batch_cur)
+            # pdb.set_trace()
+
+            if pred_gt or op_given:
+                target_op = [t.op if t is not None else OP_NONE for t in self.cur_edits]
+            else:
+                target_op = None
+
+            target_nodes = [choice[0] for choice in self.hist_choices]
+
+            target_asts = [s.pg.ast for s in self.sample_buf]
+
+            possible_ops = [self.get_possible_ops(node, ast) for node, ast in zip(target_nodes, target_asts)]
+
+            masks = self.build_masks(possible_ops)
+
+            #### stop_flags: indicate whether to choose stop option
+            op_indices, ll_op_batch_cur, stop_probs_batch_cur, stop_flags_batch_cur = self.choose_op(target_op, masks=masks, beam_size=beam_size)
+            stop_probs_batch.append(stop_probs_batch_cur)
+
+            ### update stop_steps for the batch
+            for i in range(batch_size):
+              if stop_flags_batch_cur[i]==True and stop_steps_batch[i]==-1:
+                stop_steps_batch[i]=step
+
+            new_asts = [s.pg.ast for s in self.sample_buf]
+            new_refs = [s.pg.refs for s in self.sample_buf]
+
+            num_stops = len(np.where(op_indices == self.op_names.index(OP_NONE))[0])
+            if num_stops == len(self.sample_buf):  # no one needs further edits
+                break
+
+            sub_infos = []
+            for op_id in range(len(self.ops)):
+
+                sample_ids = np.where(op_indices == op_id)[0]
+                if len(sample_ids) == 0:
+                    continue
+                if self.op_names[op_id] != OP_NONE:
+                    sub_ll, sub_states, sub_node_embedding, sub_ids = self.select_samples(graph_list=self.sample_buf,
+                                                                                          states=self.states,
+                                                                                          node_embedding=self.node_embedding,
+                                                                                          sample_ids=sample_ids)
+
+
+                    sub_gnn_graphs = [self.sample_buf[i] for i in sample_ids]
+                    sub_edits = [self.cur_edits[i] for i in sample_ids]
+                    sub_hists = [self.hist_choices[i] for i in sample_ids]
+
+                    sub_new_asts, sub_ll, sub_states, sub_ids, sub_new_refs = self.ops[op_id](sub_ll,
+                                                                                sub_states,
+                                                                                sub_gnn_graphs,
+                                                                                sub_node_embedding,
+                                                                                sub_ids,
+                                                                                sub_edits,
+                                                                                sub_hists,
+                                                                                beam_size=beam_size,
+                                                                                pred_gt=pred_gt,
+                                                                                loc_given=loc_given)
+
+                    if len(sample_ids) == len(self.sample_buf): # no need to do gather
+                        self.ll = sub_ll
+                        self.states = sub_states
+                        self.sample_indices = sub_ids
+                        new_asts = sub_new_asts
+                        new_refs = sub_new_refs
+                        break
+                    else:
+                        if beam_size == 1:
+                            for i, idx in enumerate(sample_ids):
+                                new_asts[idx] = sub_new_asts[i]
+                                new_refs[idx] = sub_new_refs[i]
+                            self.ll = replace_rows(self.ll, sample_ids, sub_ll)
+                            self.states = replace_rows(self.states, sample_ids, sub_states)
+                        else:
+                            sub_infos.append((sub_new_asts, sub_new_refs, sub_ll, sub_states, sub_ids, sample_ids))
+                elif beam_size > 1:
+                    sub_new_asts = [new_asts[i] for i in sample_ids]
+                    sub_new_refs = [new_refs[i] for i in sample_ids]
+                    sub_ll = self.ll[sample_ids]
+                    sub_states = self.states[sample_ids]
+                    sub_ids = None
+                    sub_infos.append((sub_new_asts, sub_new_refs, sub_ll, sub_states, sub_ids, sample_ids))
+            if beam_size > 1 and len(sub_infos):
+                new_asts, new_refs, contents = self.merge_ops(sub_infos, beam_size)
+            else:
+                contents = [s.pg.contents for s in self.sample_buf]
+            if step + 1 == self.max_modify_steps:
+                break
+            
+
+            #### caluculate the raw regularization term, expected edit length
+            for i in range(batch_size):
+                if stop_flags_batch_cur[i]==False and reg_flag[i]==False:
+                    stop_cumu_probs[i] = stop_cumu_probs[i] * (1-stop_probs_batch_cur[i])
+                elif stop_flags_batch_cur[i]==True:
+                    stop_cumu_probs[i] = stop_cumu_probs[i] * stop_probs_batch_cur[i]
+
+                
+                reg_batch_raw[i] += step*stop_cumu_probs[i]
+                #print(reg_batch_raw)
+
+
+
+            # build new graph representation, after the current edit to the graph
+            buggy_code_graphs = [CodeGraph(ast, new_ref, c) for (ast, new_ref, c) in zip(new_asts, new_refs, contents)]
+            self.sample_buf = [get_gnn_graph(cg, self.gnn_type) for cg in buggy_code_graphs]
+
+        agg_asts = []
+        tot_asts = 0
+        for l in self.sample_indices:
+            cur_asts = [new_asts[i] for i in l]
+            agg_asts.append(cur_asts)
+            tot_asts += len(cur_asts)
+        assert tot_asts == len(new_asts)
+
+        return self.ll, agg_asts, stop_steps_batch, reg_batch_raw

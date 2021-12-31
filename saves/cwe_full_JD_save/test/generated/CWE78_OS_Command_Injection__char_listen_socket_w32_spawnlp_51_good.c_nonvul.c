@@ -1,0 +1,1 @@
+void name_1 ( ) { char * data ; char  dataBuffer [ 100 ]  =  COMMAND_ARG2  ;  data  =  dataBuffer  ;  strcat  ( data "*.*" ) ;  name_0  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

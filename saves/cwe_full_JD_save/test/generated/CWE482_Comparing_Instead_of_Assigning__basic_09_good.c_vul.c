@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( GLOBAL_CONST_TRUE ) { { int  intBadSink  =  0  ;  printIntLine  ( intBadSink ) ;  intBadSink  ==  5  ;  printIntLine  ( intBadSink ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

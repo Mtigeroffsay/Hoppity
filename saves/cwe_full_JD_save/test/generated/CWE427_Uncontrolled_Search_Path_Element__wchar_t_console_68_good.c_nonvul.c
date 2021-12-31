@@ -1,0 +1,1 @@
+void name_2 ( ) { wchar_t  * data  =  name_1  ;  PUTENV  ( data ) ; } void name_3 ( ) { wchar_t * data ; wchar_t dataBuffer [ 250 ] = L "PATH=" ;  data  =  dataBuffer  ;  wcscat  ( data NEW_PATH ) ;  name_1  =  data  ;  name_2  ( ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_3  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_1 ( unsigned int data ) { if ( name_0 ) { { --  data  ; unsigned  data  =  data  ;  printUnsignedLine  ( result ) ; } } } void name_2 ( ) { unsigned int data ;  data  =  0  ;  data  =  ( unsigned int )   RAND32  ( )   ;  name_0  =  1  ;  name_1  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

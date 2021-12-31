@@ -1,0 +1,1 @@
+void name_2 ( ) { short data ; CWE191_Integer_Underflow__short_rand_sub_67_structType myStruct ;  data  =  0  ;  data  =  ( short )   RAND32  ( )   ;   myStruct  .  structFirst   =  data  ;  name_1  ( myStruct ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

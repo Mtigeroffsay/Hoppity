@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( 1 ) { { char  * name_1  =  NULL  ; { WSADATA wsaData ; int  wsaDataInit  =  0  ; int recvResult ; struct sockaddr_in service ; SOCKET UNKNOWN  name_3  =   atoi  ( name_2 1 )  ;  printHexCharLine  ( name_1 ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

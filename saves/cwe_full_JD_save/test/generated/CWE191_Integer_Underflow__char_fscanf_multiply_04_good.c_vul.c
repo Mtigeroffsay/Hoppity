@@ -1,0 +1,1 @@
+void name_0 ( ) { char data ;  data  =  ' '  ; if ( STATIC_CONST_TRUE ) {  fscanf  ( stdin "%c" &  data  ) ; } if ( STATIC_CONST_TRUE ) { if (  data  <  0  ) { char  data * 2  =   data  *  2   ;  printHexCharLine  ( result ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( 1 ) { { int  UNKNOWN  =  ( int * * )   ALLOCA  ( sizeof ( int ) )   ; int  * pointer  =  *  pointer   ;  printIntLine  ( data ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

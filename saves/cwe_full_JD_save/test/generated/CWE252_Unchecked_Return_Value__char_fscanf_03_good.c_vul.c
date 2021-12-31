@@ -1,0 +1,1 @@
+void name_0 ( ) { if (  5  ==  5  ) { { char  dataBuffer [ 100 ]  =  ""  ; char  * data  =  dataBuffer  ;  fscanf  ( stdin "%99s\0" data ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { goto sink ; sink : if (   RpcImpersonateClient  ( 0 )  !=  RPC_S_OK  ) {  exit  ( 1 ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

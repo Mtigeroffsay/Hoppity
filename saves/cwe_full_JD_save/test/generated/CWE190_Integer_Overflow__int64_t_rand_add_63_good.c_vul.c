@@ -1,0 +1,1 @@
+void name_0 ( int64_t * dataPtr ) { int64_t  data  =  *  dataPtr   ; { int64_t  result  =   data  +  1   ;  printLongLongLine  ( result ) ; } } void name_1 ( ) { int64_t data ; data = 0L L ;  data  =  ( int64_t )   RAND64  ( )   ;  name_0  ( &  data  ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_2 ( ) { char * data ; char  dataBuffer [ 100 ]  =  ""  ;  data  =  name_0  ;  data  =   name_0  ( data )  ; { HMODULE hModule ;  hModule  =   name_2  ( data )  ; if (  hModule  !=  NULL  ) {  FreeLibrary  ( hModule ) ; } else { } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

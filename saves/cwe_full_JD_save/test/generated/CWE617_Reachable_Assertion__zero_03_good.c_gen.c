@@ -1,0 +1,1 @@
+void name_0 ( ) { if (  5  ==  5  ) {  assert  ( 0 ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

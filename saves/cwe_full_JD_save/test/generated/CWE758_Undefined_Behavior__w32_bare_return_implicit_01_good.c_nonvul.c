@@ -1,0 +1,1 @@
+void name_0 ( ) { int  intGood1  =   helperGood1  ( )  ;  printIntLine  ( intGood1 ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

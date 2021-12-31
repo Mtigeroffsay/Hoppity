@@ -1,0 +1,1 @@
+void name_0 ( ) { unsigned int data ;  data  =  0  ; if ( GLOBAL_CONST_TRUE ) {  data  =  0  ; } if ( GLOBAL_CONST_TRUE ) { {  data  -- ; unsigned  data  =  data  ;  printUnsignedLine  ( result ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

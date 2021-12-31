@@ -1,0 +1,1 @@
+void name_0 ( ) { short data ;  data  =  0  ; if (  GLOBAL_CONST_FIVE  ==  5  ) {  data  =  SHRT_MAX  ; } if (  GLOBAL_CONST_FIVE  ==  5  ) { if (  data  >  0  ) { short  result  =   data  *  2   ;  printIntLine  ( result ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

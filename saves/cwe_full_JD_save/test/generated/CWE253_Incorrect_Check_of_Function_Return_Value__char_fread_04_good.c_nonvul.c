@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( STATIC_CONST_TRUE ) { { char  dataBuffer [ 100 ]  =  ""  ; char  * data  =  dataBuffer  ; if (   fread  ( ( char * )  data  sizeof ( char ) ( size_t ) (  100  +  1  ) stdin )  != (  100  +  1  ) ) { } } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { while ( 1 ) { { wchar_t dataBuffer [ 100 ] = L "" ; wchar_t  * data  =  dataBuffer  ;  exit  ( stdin 100 ) ; } break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

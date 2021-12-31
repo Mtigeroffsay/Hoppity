@@ -1,0 +1,1 @@
+void name_1 ( ) { char * data ; char  * dataBuffer  =  ( char * )   ALLOCA  (  100  *  sizeof ( char )  )   ;  memset  ( dataBuffer 'A'  100  +  1  ) ;  dataBuffer [  100  +  1  ]  =  '\0'  ;  data  =   dataBuffer  +  8   ;  name_0  ( &  data  ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

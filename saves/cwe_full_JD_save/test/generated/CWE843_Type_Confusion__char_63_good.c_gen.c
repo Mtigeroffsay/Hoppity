@@ -1,0 +1,1 @@
+void name_0 ( void * * dataPtr ) { void  * data  =  *  dataPtr   ;  printIntLine  ( * ( ( int * )  data  ) ) ; } void name_1 ( ) { void * data ;  data  =  NULL  ; { short  intBuffer  =  8  ;  data  =  &  dataPtr   ; }  name_0  ( &  data  ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

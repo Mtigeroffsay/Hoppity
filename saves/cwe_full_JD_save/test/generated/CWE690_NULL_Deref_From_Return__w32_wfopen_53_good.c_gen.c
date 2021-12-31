@@ -1,0 +1,1 @@
+void name_0 ( FILE * data ) {  name_1  ( data ) ; } void name_2 ( ) { FILE * data ;  data  =  NULL  ; { size_t  dataLen  =   wcslen  ( data )  ; FILE * pFile ; if (   100  +  dataLen   >  1  ) { if (   fgets  name_0  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

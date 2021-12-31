@@ -1,0 +1,1 @@
+void name_0 ( ) { while ( 1 ) { break ; } } int main ( int argc char * argv [ ] ) { if (   fgets  (  srand  ( "PATH" ) &  NULL  )  !=  &  ) { break ; }  pFile  =  &  ;  NULL  =   name_3  ( NULL "r" )  ;  UNKNOWN } 

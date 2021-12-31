@@ -1,0 +1,1 @@
+void name_0 ( int count ) {  name_1  ( count ) ; } void name_3 ( ) { int count ;  count  =  -  1   ;  fscanf  ( stdin "%d" &  count  ) ;  name_0  ( count ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_3  ( ) ; return 0 ; } 

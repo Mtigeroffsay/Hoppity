@@ -1,0 +1,1 @@
+void name_0 ( ) { if (  globalFive  ==  5  ) { { FILE  * fileDesc  =  NULL  ;  fileDesc  =   fopen  ( "file.txt" "w+" )  ; if (  fileDesc  ==  NULL  ) {  exit  ( 1 ) ; }  fclose  ( fileDesc ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { wchar_t * data ;  data  =  NULL  ; if (  globalFive  ==  5  ) {  data  =  ( wchar_t * )   malloc  (  100  *  sizeof ( wchar_t )  )   ; if (  data  ==  NULL  ) {  exit  ( -  1  ) ; }  free  ( data ) ; } if (  globalFive  ==  5  ) { ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

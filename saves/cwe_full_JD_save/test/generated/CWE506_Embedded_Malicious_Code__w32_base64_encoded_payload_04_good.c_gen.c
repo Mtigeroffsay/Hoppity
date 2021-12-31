@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( STATIC_CONST_TRUE ) { { char  * decodedPayload  =  "calc.exe"  ; if (   system  ( decodedPayload )  <=  0  ) {  exit  ( 0 ) ; } } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

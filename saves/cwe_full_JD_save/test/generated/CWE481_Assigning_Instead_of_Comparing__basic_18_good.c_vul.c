@@ -1,0 +1,1 @@
+void name_0 ( ) { goto sink ; sink : { int  intRand  =   rand  ( )  ; if (  intRand  =  5  ) { } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_2 ( ) { int64_t data ; int64_t dataArray [ 5 ] ; data = 0L L ;  fscanf  ( dataArray ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

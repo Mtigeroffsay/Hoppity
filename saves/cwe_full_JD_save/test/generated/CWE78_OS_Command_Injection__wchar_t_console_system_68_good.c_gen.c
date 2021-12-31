@@ -1,0 +1,1 @@
+void name_3 ( ) { wchar_t * data ; wchar_t  data_buf [ 100 ]  =  FULL_COMMAND  ;  data  =  data_buf  ; { size_t  dataLen  =   wcslen  ( data )  ; wchar_t  * environment  =   GETENV  ( name_1 )  ; FILE UNKNOWN  name_0  =  data  ;  name_2  ( L data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_3  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( globalTrue ) { { int  * intPointer  =  NULL  ; if (  intPointer  ==  NULL  ) {  printIntLine  ( *  intPointer  ) ; } } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_1 ( ) { int count ;  count  =  -  1   ;  count  =   RAND32  ( )  ;  name_0  ( count ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

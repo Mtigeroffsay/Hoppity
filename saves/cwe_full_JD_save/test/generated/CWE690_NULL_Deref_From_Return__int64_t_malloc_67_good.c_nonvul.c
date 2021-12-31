@@ -1,0 +1,1 @@
+void name_1 ( ) { int64_t * data ; CWE690_NULL_Deref_From_Return__int64_t_malloc_67_structType myStruct ;  data  =  NULL  ;  data  =  ( int64_t * )   malloc  (  1  *  sizeof ( int64_t )  )   ;   myStruct  .  structFirst   =  data  ;  name_0  ( myStruct ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

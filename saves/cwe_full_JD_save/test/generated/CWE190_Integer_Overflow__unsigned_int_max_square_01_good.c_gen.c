@@ -1,0 +1,1 @@
+void name_0 ( ) { unsigned int data ;  data  =  0  ;  data  =  UINT_MAX  ; {  data  ( ; unsigned  data * data  =  data  ;  sqrt  ( result ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

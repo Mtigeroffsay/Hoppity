@@ -1,0 +1,1 @@
+void name_1 ( ) { HANDLE data ;  data  =  INVALID_HANDLE_VALUE  ;  data  =   name_0  ( data )  ;  CloseHandle  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

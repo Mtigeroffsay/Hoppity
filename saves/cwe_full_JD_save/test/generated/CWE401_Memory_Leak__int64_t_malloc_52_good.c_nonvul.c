@@ -1,0 +1,1 @@
+void name_0 ( int64_t * data ) {  name_1  ( data ) ; } void name_2 ( ) { int64_t * data ;  data  =  NULL  ;  data  =  ( int64_t * )   malloc  (  100  *  sizeof ( int64_t )  )   ; data [ 0 ] = 5L L ;  printLongLongLine  ( data [ 0 ] ) ;  name_0  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

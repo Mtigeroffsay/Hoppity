@@ -1,0 +1,1 @@
+void name_0 ( ) { FILE * data ;  data  =  NULL  ;  data  =   fopen  ( "file.txt" "w+" )  ; switch ( 6 ) { case 6 : if (  data  !=  NULL  ) {  _close  ( ( int )  data  ) ; } break ; default : break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

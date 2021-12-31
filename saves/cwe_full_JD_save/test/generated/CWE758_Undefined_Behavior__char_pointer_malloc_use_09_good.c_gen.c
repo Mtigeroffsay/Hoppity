@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( GLOBAL_CONST_TRUE ) { { char  UNKNOWN  =  ( char * * )   malloc  ( sizeof ( char * ) )   ; char  * pointer  =  *  pointer   ;  exit  ( pointer ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

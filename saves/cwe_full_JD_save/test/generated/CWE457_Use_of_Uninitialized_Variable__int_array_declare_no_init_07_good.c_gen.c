@@ -1,0 +1,1 @@
+void name_0 ( ) { int * data ; int dataUninitArray [ 10 ] ;  data  =  dataUninitArray  ; if (  staticFive  ==  5  ) { ; } if (  staticFive  ==  5  ) { { int i ; for (  i  =  0  ;  i  <  10   i  ++ ) {  printIntLine  (  data [ i ]  <  i  ) ; } } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

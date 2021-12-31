@@ -1,0 +1,1 @@
+void name_0 ( ) { goto sink ; sink : { char  * keyName  =  "TEST\\TestKey"  ; HUSKEY hKey ; if (   SHRegCreateUSKeyA  ( keyName KEY_WRITE NULL &  hKey  SHREGSET_HKCU )  !=  ERROR_SUCCESS  ) { } else {  SHRegCloseUSKey  ( hKey ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

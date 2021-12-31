@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( 1 ) { { wchar_t * keyName = L "TEST\\TestKey" ; HUSKEY hKey ; if (   SHRegOpenUSKeyW  ( keyName KEY_WRITE NULL &  hKey  FALSE )  !=  ERROR_SUCCESS  ) { } else {  SHRegCloseUSKey  ( hKey ) ; } } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

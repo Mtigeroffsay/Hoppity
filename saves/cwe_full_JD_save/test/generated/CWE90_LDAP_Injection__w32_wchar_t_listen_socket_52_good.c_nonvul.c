@@ -1,0 +1,1 @@
+void name_0 ( wchar_t * data ) {  name_1  ( data ) ; } void name_2 ( ) { wchar_t * data ; wchar_t dataBuffer [ 256 ] = L "" ;  data  =  dataBuffer  ; wcscat ( data , L "Doe, XXXXX" ) ;  name_0  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

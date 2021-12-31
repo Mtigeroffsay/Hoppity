@@ -1,0 +1,1 @@
+void name_0 ( ) { int i ; void * data ;  data  =  NULL  ; for (  i  =  0  ;  i  <  1   i  ++ ) { { short  shortBuffer  =  8  ;  data  =  &  shortBuffer   ; } }  printIntLine  ( * ( ( int * )  data  ) ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

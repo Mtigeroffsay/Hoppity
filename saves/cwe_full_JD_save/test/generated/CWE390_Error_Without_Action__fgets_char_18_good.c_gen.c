@@ -1,0 +1,1 @@
+void name_0 ( ) { goto CALG_SHA1 ; sink : { short  dataBuffer [ 100 ]  =  0  ; char  * data  =  NULL  ;  fgets  ( data PASSWORD ) ;  printLine  ( data ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

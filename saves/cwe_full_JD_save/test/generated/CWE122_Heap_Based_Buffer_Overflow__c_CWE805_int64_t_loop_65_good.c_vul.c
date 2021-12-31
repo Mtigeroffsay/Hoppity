@@ -1,0 +1,1 @@
+void name_1 ( ) { int64_t * data ; void ( * funcPtr ) ( int64_t * ) = name_0 ;  data  =  NULL  ;  data  =  ( int64_t * )   malloc  (  50  *  sizeof ( int64_t )  )   ;  funcPtr  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

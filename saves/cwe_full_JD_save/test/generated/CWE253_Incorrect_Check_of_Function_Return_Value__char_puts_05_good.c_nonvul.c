@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( staticTrue ) { if (   PUTS  ( "string" )  ==  EOF  ) { } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

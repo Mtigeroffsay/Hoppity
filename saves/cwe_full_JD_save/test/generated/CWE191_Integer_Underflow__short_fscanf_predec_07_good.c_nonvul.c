@@ -1,0 +1,1 @@
+void name_0 ( ) { short data ;  data  =  0  ; if (  staticFive  ==  5  ) {  fscanf  ( stdin "%hd" &  data  ) ; } if (  staticFive  ==  5  ) { if (  data  >  SHRT_MIN  ) { --  data  ; short  result  =  data  ;  printIntLine  ( result ) ; } else { } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { char data ;  data  =  ' '  ; while ( 1 ) {  data  =  ( char )   RAND32  ( )   ; break ; } while ( 1 ) { {  data  ++ ; char  data  =  data  ;  printHexCharLine  ( result ) ; } break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

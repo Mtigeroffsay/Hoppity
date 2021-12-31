@@ -1,0 +1,1 @@
+void name_0 ( ) { int64_t * data ;  data  =  NULL  ;  data  =  ( int64_t * )   calloc  ( 1 sizeof ( int64_t ) )   ; if (  staticFive  ==  5  ) {  printLongLongLine  ( ] ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

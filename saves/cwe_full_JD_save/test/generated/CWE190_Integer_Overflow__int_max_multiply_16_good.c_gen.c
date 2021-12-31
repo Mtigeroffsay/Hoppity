@@ -1,0 +1,1 @@
+void name_0 ( ) { int data ;  data  =  0  ; while ( 1 ) {  data  =  INT_MAX  ; break ; } while ( 1 ) { if (  data  >  0  ) { int  result  =   data  *  2   ;  printIntLine  ( result ) ; } break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

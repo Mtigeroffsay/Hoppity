@@ -1,0 +1,1 @@
+void name_2 ( ) { int count ;  count  =  -  1   ;  count  =   name_1  ( count )  ; { size_t  i  =  0  ; if (   count  >  0   &&   count  <=  20   ) { for (  i  =  0  ;  i  <  ( size_t )  count    i  ++ ) { } } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

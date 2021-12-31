@@ -1,0 +1,1 @@
+void name_0 ( ) { switch ( 6 ) { case 6 : { int  intBadSink  =  0  ;  printIntLine  ( intBadSink ) ;  intBadSink  ==  5  ;  printIntLine  ( intBadSink ) ; } break ; default : break ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

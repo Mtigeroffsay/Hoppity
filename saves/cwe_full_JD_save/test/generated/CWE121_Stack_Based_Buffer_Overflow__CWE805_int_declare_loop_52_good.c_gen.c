@@ -1,0 +1,1 @@
+void name_0 ( int * data ) {  name_1  ( data ) ; } void name_0 ( ) { int * data ; int dataBadBuffer [ 50 ] ; int dataGoodBuffer [ 100 ] ;  data  =  dataGoodBuffer  ;  name_0  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

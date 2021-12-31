@@ -1,0 +1,1 @@
+void name_0 ( ) { int data ;  data  =  -  1   ; while ( 1 ) {  data  =   ASSERT_VALUE  +  1   ; break ; }  assert  (  data  >  ASSERT_VALUE  ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_0 ( ) { twoIntsStruct * data ;  data  =  NULL  ;  data  =  ( twoIntsStruct * )   calloc  ( 1 sizeof ( twoIntsStruct ) )   ; if ( STATIC_CONST_TRUE ) {  data [ 0 ]  =  1  ;  printStructLine  ( data ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

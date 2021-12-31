@@ -1,0 +1,1 @@
+void name_0 ( ) { if (  globalFive  ==  5  ) { { double doubleNumber ;  exit  ( stdin 1 ) ;  sqrt  ( doubleNumber 1 -  doubleNumber  ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

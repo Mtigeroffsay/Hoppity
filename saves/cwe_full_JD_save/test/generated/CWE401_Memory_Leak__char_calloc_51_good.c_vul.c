@@ -1,0 +1,1 @@
+void name_1 ( ) { char * data ;  data  =  NULL  ;  data  =  ( char * )   calloc  ( 100 sizeof ( char ) )   ;  strcpy  ( data "A String" ) ;  printLine  ( data ) ;  name_0  ( data ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

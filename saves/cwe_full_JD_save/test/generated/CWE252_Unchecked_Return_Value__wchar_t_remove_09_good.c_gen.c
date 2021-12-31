@@ -1,0 +1,1 @@
+define REMOVE _wremove define REMOVE remove void name_0 ( ) { if ( GLOBAL_CONST_TRUE ) { if ( REMOVE ( L "removemegood.txt" ) == 0 ) { } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

@@ -1,0 +1,1 @@
+void name_1 ( ) { int64_t * data ; int64_t  * dataBadBuffer  =  ( int64_t * )   ALLOCA  (  50  *  sizeof ( int64_t )  )   ; int64_t  * dataGoodBuffer  =  ( int64_t * )   ALLOCA  (  100  *  sizeof ( int64_t )  )   ;  data  =  dataGoodBuffer  ;  name_0  ( &  data  ) ; } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_1  ( ) ; return 0 ; } 

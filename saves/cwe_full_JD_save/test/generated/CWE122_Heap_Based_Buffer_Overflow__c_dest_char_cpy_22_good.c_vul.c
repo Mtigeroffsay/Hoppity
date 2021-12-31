@@ -1,0 +1,1 @@
+void name_2 ( ) { char * data ;  data  =  NULL  ;  name_0  =  1  ;  data  =   name_1  ( data )  ; { char source [ 100 ] ;  memset  ( source 'C'  100  +  1  ) ;  source [  100  +  1  ]  =  '\0'  ;  strcpy  ( data source ) ;  printLine  ( data ) ;  free  ( data ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_2  ( ) ; return 0 ; } 

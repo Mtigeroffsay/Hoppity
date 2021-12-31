@@ -1,0 +1,1 @@
+define SYSTEM system define SYSTEM system void name_0 ( ) { char * data ; char  ""  =  ""  ;  data  =  dataBuffer  ; if ( 1 ) {  strcpy  ( data GOOD_OS_COMMAND ) ; } if (   SYSTEM  ( data )  <=  0  ) {  exit  ( 1 ) ; } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

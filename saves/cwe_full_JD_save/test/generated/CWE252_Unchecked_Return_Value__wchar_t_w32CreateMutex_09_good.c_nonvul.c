@@ -1,0 +1,1 @@
+void name_0 ( ) { if ( GLOBAL_CONST_TRUE ) { { HANDLE  hMutex  =  NULL  ;  hMutex  =   CreateMutexW  ( NULL FALSE NULL )  ; if (  hMutex  ==  NULL  ) {  exit  ( 1 ) ; }  CloseHandle  ( hMutex ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

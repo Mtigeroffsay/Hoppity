@@ -1,0 +1,1 @@
+void name_0 ( ) { char data ;  data  =  ' '  ; if ( STATIC_CONST_TRUE ) {  data  =  CHAR_MAX  ; } if ( STATIC_CONST_TRUE ) { { char  data * data  =   data  *  data   ;  printHexCharLine  ( result ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 

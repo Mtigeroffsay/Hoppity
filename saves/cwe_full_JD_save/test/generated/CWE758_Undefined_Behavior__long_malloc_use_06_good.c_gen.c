@@ -1,0 +1,1 @@
+void name_0 ( ) { if (  STATIC_CONST_FIVE  ==  5  ) { { long  UNKNOWN  =  ( long * )   malloc  ( sizeof ( long ) )   ; long  data  =  *  pointer   ;  exit  ( pointer ) ; } } } int main ( int argc char * argv [ ] ) {  srand  ( ( unsigned )   time  ( NULL )  ) ;  name_0  ( ) ; return 0 ; } 
